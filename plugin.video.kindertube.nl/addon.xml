@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.kindertube.nl"
+       name="KinderTube"
+       version="1.0.2A"
+       provider-name="KAOSbox">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.urlresolver" />
+  	<import addon="plugin.video.vimeo" optional="true" />
+  	<import addon="plugin.video.youtube" />
+  	<import addon="script.module.metahandler" optional="true" />
+  	<import addon="script.module.addon.common" optional="true" />
+  	<import addon="script.common.plugin.cache" optional="true" />
+  	<import addon="script.module.t0mm0.common" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary></summary>
+  	<description>De leukste kinderfilmpjes</description>
+  	<disclaimer>By using this, you take reponsibility for anything that happens.</disclaimer>
+  	<language>nl</language>
+  	<platform>all</platform>
+    <forum></forum>
+    <website></website>
+    <source></source>
+  </extension>
+</addon>
