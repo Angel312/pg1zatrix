@@ -1350,7 +1350,7 @@ http://halowtv.org[/COLOR]</description>
 
 <addon id="plugin.video.thepyramid"
        name="The Pyramid"
-       version="1.62"
+       version="1.63"
        provider-name="TomBraiderMovies">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
