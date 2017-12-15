@@ -579,7 +579,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.covenant" version="2.1.30A" name="Covenant" provider-name="Covenant">
+<addon id="plugin.video.covenant" version="2.1.31" name="Covenant" provider-name="Covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.covenant" />
@@ -1023,7 +1023,7 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.rebirth" version="1.0.2" name="Rebirth" provider-name="Cypher">
+<addon id="plugin.video.rebirth" version="1.0.3" name="Rebirth" provider-name="Cypher">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.rebirth.artwork" version="1.0.0" />
@@ -1116,7 +1116,7 @@ http://www.hometheater.co.il</description>
 
 <addon id="plugin.video.SkyNet"
        name="SkyNet"
-       version="3.1"
+       version="4.0"
        provider-name="SkyNet">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1129,10 +1129,13 @@ http://www.hometheater.co.il</description>
     <import addon="script.module.httplib2" />
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" />
+    <import addon="script.module.urlresolver" optional="true"/>
     <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.nanscrapers"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.web-pdb" version="1.0"/>
 
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -1379,14 +1382,13 @@ http://halowtv.org[/COLOR]</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.ufc-finest" name="Planet MMA" version="3.5" provider-name="DK">
+<addon id="plugin.video.ufc-finest" name="Planet MMA" version="3.7" provider-name="DK">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simplejson" version="3.3.0"/>
     <import addon="script.module.urlresolver"  version="3.0.32"/>
     <import addon="script.module.liveresolver" version="0.1.24"/>
     <import addon="script.common.plugin.cache" version="2.5.2"/>
-
     <import addon="script.module.metahandler" version="2.5.1"/>
     <import addon="plugin.video.youtube" optional="true" />
   </requires>
