@@ -1023,7 +1023,7 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.rebirth" version="1.0.3" name="Rebirth" provider-name="Cypher">
+<addon id="plugin.video.rebirth" version="1.0.3A" name="Rebirth" provider-name="Cypher">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.rebirth.artwork" version="1.0.0" />
