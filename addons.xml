@@ -1773,7 +1773,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.covenant" name="Covenant Module" version="2.00.030" provider-name="Covenant">
+<addon id="script.module.covenant" name="Covenant Module" version="2.00.030A" provider-name="Covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
