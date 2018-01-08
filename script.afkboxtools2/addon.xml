@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.afkboxtools2" name="AFK-Box Update Tools" version="2.1.6" provider-name="AFK">
+  <requires>
+    	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">AFK Installer</summary>
+    <description lang="en">Installeer de build van AlleFilmskijken.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>

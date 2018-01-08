@@ -1004,7 +1004,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="1.0.4" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="1.0.6" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
@@ -1013,6 +1013,7 @@
 		<import addon="script.module.urlresolver" version="3.0.0" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
+        <import addon="plugin.video.youtube"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
@@ -1051,7 +1052,7 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.rebirth" version="1.0.3A" name="Rebirth" provider-name="Cypher">
+<addon id="plugin.video.rebirth" version="1.0.4" name="Rebirth" provider-name="Cypher">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.rebirth.artwork" version="1.0.0" />
@@ -1726,6 +1727,20 @@ Addons Included
 	</extension>
 </addon>
 
+<addon id="script.afkboxtools2" name="AFK-Box Update Tools" version="2.1.6" provider-name="AFK">
+  <requires>
+    	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">AFK Installer</summary>
+    <description lang="en">Installeer de build van AlleFilmskijken.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="script.audio.spotimc" version="1.0-beta5" name="Spotimc" provider-name="Mikel Azkolain">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -1826,7 +1841,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.0.7" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.0.9" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
