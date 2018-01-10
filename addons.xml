@@ -1841,7 +1841,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.0.9" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.1.0" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
@@ -1849,7 +1849,7 @@ Addons Included
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Placenta</summary>
-		<description>You are welcome! - Team Afterbirth (mr blamo and Muad'Dib)</description>
+		<description>You are welcome! - Team Afterbirth (Mr Blamo and Muad'Dib)</description>
 	</extension>
 </addon>
 
