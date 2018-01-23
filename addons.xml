@@ -1004,7 +1004,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="1.0.6" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="1.1.2" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
@@ -1021,7 +1021,7 @@
 	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Placenta</summary>
-		<description>You are welcome! - Team Afterbirth (mr blamo and Muad'Dib)</description>
+		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
 		<platform>all</platform>
 		<license>Beerware rev. 42</license>
 		<assets>
@@ -1145,7 +1145,7 @@ http://www.hometheater.co.il</description>
 
 <addon id="plugin.video.SkyNet"
        name="SkyNet"
-       version="4.0.2"
+       version="4.0.3"
        provider-name="SkyNet">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1382,7 +1382,7 @@ http://halowtv.org[/COLOR]</description>
 
 <addon id="plugin.video.thepyramid"
        name="The Pyramid"
-       version="1.66"
+       version="1.73"
        provider-name="TomBraiderMovies">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1390,7 +1390,6 @@ http://halowtv.org[/COLOR]</description>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.simple.downloader" version="0.9.4"/>
     <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.youtube.dl" optional="true"/>
@@ -1841,7 +1840,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.1.0" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.1.6" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
