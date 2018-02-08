@@ -17,12 +17,7 @@
   <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">The best bits of Elysium</summary>
-    <summary lang="nl">Het beste van Elysium</summary>
-    <summary lang="he">הרחבת וידאו Jen</summary>
     <description lang="en">The best bits of Elysium. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
-    <description lang="nl">Het beste van Elysium. Dit produkt gebruikt de TMDb API maar is niet onderschreven of gecertificeerd door TMDb.</description>
-    <disclaimer lang="en">The authors of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk! This is a stripped down version of Elysium using the Jen Template.</disclaimer>
-    <disclaimer lang="he">מחבר ההרחבה זה אינו מארח את התוכן שיתכן ויימצא ואין לו זיקה לאף אחד מספקי התוכן. הרחבה רק מחפשת תוכן שקיים באתרי אינטרנט. השימוש בהרחבה הוא על אחריותך בלבד!</disclaimer>
     <platform>all</platform>
     <news>First release / Huge thanks to: Midraal, ARB, Blue, Bromerzz, DaButcher, Deezel, Les, Team NaN, Midraal (yes, I know but he deserves to be mentioned more then once)</news>
     <website>www.noobsandnerds.com</website>
