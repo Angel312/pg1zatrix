@@ -43,7 +43,7 @@
 </addon>
 
 <addon id="net.rieter.xot.channel.be"
-       version="4.1.7.0"
+       version="4.1.7.1"
        name="Retrospect Belgium Channels"
        provider-name="Bas Rieter">
 
@@ -134,7 +134,7 @@
 </addon>
 
 <addon id="net.rieter.xot.channel.nick"
-       version="4.1.7.0"
+       version="4.1.7.1"
        name="Retrospect Nickelodeon Channels"
        provider-name="Bas Rieter">
 
@@ -180,7 +180,7 @@
 </addon>
 
 <addon id="net.rieter.xot.channel.nos"
-       version="4.1.7.1"
+       version="4.1.7.3"
        name="Retrospect Dutch NOS Channels"
        provider-name="Bas Rieter">
 
@@ -272,7 +272,7 @@
 </addon>
 
 <addon id="net.rieter.xot.channel.se"
-       version="4.1.7.0"
+       version="4.1.7.4"
        name="Retrospect Swedish Channels"
        provider-name="Bas Rieter">
 
@@ -564,7 +564,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.cartoons8" name="Cartoons8" version="1.0.34" provider-name="MetalKettle">
+<addon id="plugin.video.cartoons8" name="Cartoons8" version="2.0.0" provider-name="Goliath">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.urlresolver"  version="0.0.1"/>
@@ -1004,13 +1004,13 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="1.1.2" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="2.1.5" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
 		<import addon="script.placenta.artwork" version="1.0.0" />
 		<import addon="script.placenta.metadata" version="1.0.0" />
-		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
         <import addon="plugin.video.youtube"/>
@@ -1018,7 +1018,6 @@
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Placenta</summary>
 		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
@@ -1663,6 +1662,24 @@ http://halowtv.org[/COLOR]</description>
   </extension>
 </addon>
 
+<addon id="repository.jsergio" name="jsergio repo" version="1.0.3" provider-name="jsergio">
+	<extension point="xbmc.addon.repository" name="jsergio repo">
+        <dir>
+            <info compressed="false">https://raw.github.com/ddurdle/repository.ddurdle/master/addons.xml</info>
+            <checksum>https://raw.github.com/ddurdle/repository.ddurdle/master/addons.xml.md5</checksum>
+            <datadir zip="true">http://dmdsoftware.net/repository.ddurdle/</datadir>
+        </dir>
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo for jsergio Add-ons</summary>
+		<description>Repo for jsergio Add-ons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="repository.tknorris.beta" name="tknorris Beta Testing Repository" version="1.0.5" provider-name="tknorris">
     <extension point="xbmc.addon.repository" name="tknorris beta testing repository">
     </extension>
@@ -1683,22 +1700,22 @@ Addons Included
     </extension>
 </addon>
 
-<addon id="repository.ukturk" name="UKTurk Addon Repository" version="1.0.6" provider-name="UKTurk">
-	<extension point="xbmc.addon.repository" name="UKTurk Addon Repository">
-	<dir>
-        	<info compressed="false">https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml</info>
-        	<checksum>https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5</checksum>
-        	<datadir zip="true">https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/</datadir>
-    	</dir>
-		<info compressed="false">https://raw.githubusercontent.com/restbite/UKT/master/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/restbite/UKT/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/restbite/UKT/master/zips/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Install UKTurk</summary>
-		<description>Install UKTurk</description>
-		<platform>all</platform>
-	</extension>
+<addon id="repository.ukturk" name="UKTurk Addon Repository" version="1.0.8" provider-name="UKTurk">
+    <extension point="xbmc.addon.repository" name="UKTurk Addon Repository">
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+        <info compressed="false">https://addoncloud.org/ukturk/install/repo/addons.xml</info>
+        <checksum>https://addoncloud.org/ukturk/install/repo/addons.xml.md5</checksum>
+        <datadir zip="true">https://addoncloud.org/ukturk/install/repo/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+            <summary>Install UKTurk</summary>
+            <description>Install UKTurk</description>
+            <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.zatrix" name="Zatrix Repo" version="1.0.5" provider-name="Angel">
@@ -1840,7 +1857,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.1.6" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.1.9" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
@@ -1848,7 +1865,7 @@ Addons Included
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Placenta</summary>
-		<description>You are welcome! - Team Afterbirth (Mr Blamo and Muad'Dib)</description>
+		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
 	</extension>
 </addon>
 
