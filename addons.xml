@@ -715,37 +715,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.elysiumlite" name="Elysium Lite" version="2018.01.22" provider-name="Elysium">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-    <import addon="script.module.nanscrapers" version="0.5.5"/>
-    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.requests" version="2.9.1"/>
-    <import addon="script.module.addon.common" version="2.0.0"/>
-    <import addon="script.module.xmltodict" version="0.9.0" />
-    <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-    <import addon="script.module.urlresolver" version="1.2.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="[login|startup]"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">The best bits of Elysium</summary>
-    <description lang="en">The best bits of Elysium. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
-    <platform>all</platform>
-    <news>First release / Huge thanks to: Midraal, ARB, Blue, Bromerzz, DaButcher, Deezel, Les, Team NaN, Midraal (yes, I know but he deserves to be mentioned more then once)</news>
-    <website>www.noobsandnerds.com</website>
-    <video_guide>xtOqLY5PJDY</video_guide>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot>resources/screenshots/screenshot000.jpg</screenshot>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="plugin.video.exodus" version="4.1.07" name="Exodus" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -1325,7 +1294,7 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.subzero" name="[COLOR blue]SubZero[/COLOR]" version="1.0.0" provider-name="Razer">
+<addon id="plugin.video.subzero" name="[COLOR blue]SubZero[/COLOR]" version="1.0.4" provider-name="Razer">
 <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -1334,7 +1303,7 @@ http://www.hometheater.co.il</description>
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="script.module.urlresolver" />
+    <import addon="script.module.resolveurl" />
     <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
@@ -1344,7 +1313,7 @@ http://www.hometheater.co.il</description>
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Movies Brought To You By Razer</summary>
+    <summary lang="en">Playlists Brought To You By Razer</summary>
     <description lang="en">This is a new project, content added on a daily basis!</description>
     <disclaimer lang="en">Credit: Merlin Project And Livestreams Pro</disclaimer>
     <platform>all</platform>
@@ -1866,14 +1835,15 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.covenant" name="Covenant Module" version="2.00.030A" provider-name="Covenant">
+<addon id="script.module.covenant" name="covenant Module" version="2.16" provider-name="covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">Covenant</summary>
+		<summary lang="en">covenant</summary>
 	</extension>
 </addon>
 

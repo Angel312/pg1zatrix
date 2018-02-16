@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.covenant" name="Covenant Module" version="2.00.030A" provider-name="Covenant">
+<addon id="script.module.covenant" name="covenant Module" version="2.16" provider-name="covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">Covenant</summary>
+		<summary lang="en">covenant</summary>
 	</extension>
 </addon>
