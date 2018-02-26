@@ -811,6 +811,46 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.incursion" version="0.1.15" name="Incursion" provider-name="Incursion">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.incursion" />
+		<import addon="script.incursion.artwork" />
+		<import addon="script.incursion.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="incursion.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Incursion</summary>
+		<description lang="en">[I]New Resistance[/I][CR][CR][B]Incursion - Media for the Masses[/B][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>
+v0.1.15 (FEB-2018)
+Fixed "Trakt - Mark as Watched" Issues
+Added Trakt Bookmarks Function
+Added Auto Resume Option
+Trakt On Deck - Reversed to show last played first.
+		</news>
+	</extension>
+</addon>
+
 <addon id="plugin.video.jericho"
        name="Jericho"
        version="2.1.5"
@@ -938,26 +978,6 @@
 		<license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
 		<source>https://github.com/5-star/plugin.video.last_played</source>
 	</extension>
-</addon>
-
-<addon id="plugin.video.myriad_gw" name="MYRIAD" version="1.0.4" provider-name="Dandymedia">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.urlresolver"  version="3.0.0"/>
-	<import addon="script.module.addon.common" />
-    <import addon="script.module.dandyscrapers" version="0.0.1" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.metahandler" version="2.5.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-	<summary lang="en">Multi Site scrapper for Movies and TV Shows.</summary>
-	<description lang="en">Multi scrapper using IMDB and a modded version of nanscrapers, credit to NAN and Midraal for original code adapted and used, and allowing me to learn from.[CR][CR]Thanks to Origin for help with headaches along the way.[CR][CR]Enable and authorise debrid sources through the url resolver as normal, more links will become available.</description>
-	<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon or have any affiliation with the website owners</disclaimer>
-	<platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.video.nbaondemand" name="NBA On-demand" version="2.0.7" provider-name="lambda,enen92,jsergio">
@@ -1105,43 +1125,6 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.salts" version="3.0.01" name="Stream All The Sources" provider-name="k3l3vra">
-    <requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-        <import addon="script.module.pyxbmct" version="1.1.4"/>
-        <import addon="script.module.urlresolver" version="3.0.0"/>
-		<import addon="script.module.metahandler" version="1.0.0" />
-		<import addon="script.module.futures"/>
-        <import addon="script.module.myconnpy" version="1.1.6" />
-        <import addon="script.module.salts"/>
-        <import addon="script.module.six"/>
-        <import addon="script.module.dateutil"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-     <extension point="xbmc.service" library="service.py" start="startup"/>
-    <extension point="xbmc.addon.metadata">
-        <summary>Stream video from many difference sources</summary>
-        <description>This addon uses trakt.tv for most show and movie meta data and uses a variety of websites for hoster sources
-
-***This addon is developed and supported at [COLOR blue]www.tvaddons.co[/COLOR]***
-        </description>
-        <platform>all</platform>
-        <website>https://www.tvaddons.co/</website>
-		<forum>https://www.tvaddons.co/forums/</forum>
-		<assets>
-		  <icon>icon.png</icon>
-		  <fanart>fanart.jpg</fanart>
-		  <screenshot>resources/screenshots/screenshot1.png</screenshot>
-          <screenshot>resources/screenshots/screenshot2.png</screenshot>
-          <screenshot>resources/screenshots/screenshot3.png</screenshot>
-          <screenshot>resources/screenshots/screenshot4.png</screenshot>
-          <screenshot>resources/screenshots/screenshot5.png</screenshot>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="plugin.video.SkyNet"
        name="SkyNet"
        version="4.0.3"
@@ -1174,57 +1157,6 @@ http://www.hometheater.co.il</description>
     <description lang="en">SkyNet</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.specto" name="Specto"  version="2017.06.11.1" provider-name="mrknow" >
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.requests" />
-		<import addon="script.module.metahandler" />
-		<import addon="plugin.video.youtube" optional="true" />
-		<import addon="script.mrknow.urlresolver" />
-		<import addon="script.specto.media" />
-
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Mrknow fork of ...</summary>
-		<description lang="en">Specto - ... Fork. Website http://filmkodi.com . Our suport forum https://github.com/mrknow/filmkodi/issues.</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.
-		</disclaimer>
-		<forum>https://github.com/mrknow/filmkodi/issues</forum>
-		<source>http://filmkodi.com/repository/</source>
-		<website>http://filmkodi.com/en/wtyczka-specto-fork-genesis/</website>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="plugin.video.spinzflix" name="SpinzFlix" version="1.3" provider-name="midraal, SpezC">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.nanscrapers" version="0.5.5" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.urlresolver" version="1.2.0" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en"></summary>
-        <description lang="en">STV TEST</description>
-        <platform>all</platform>
-        <website>www.noobsandnerds.com</website>
-        <video_guide>xtOqLY5PJDY</video_guide>
-    </extension>
 </addon>
 
 <addon
@@ -1263,37 +1195,6 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.strictlyhd" name="Strictly HD" version="1.0.1" provider-name="@LuciferOnKodi">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.beautifulsoup" version="3.2.1"/>
-	<import addon="script.module.urlresolver" version="4.0.07"/>
-	<import addon="script.module.requests" version="2.9.1"/>
-	<import addon="script.module.futures" version="2.2.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>You place for HD-only content. No Real Debrid needed.</summary>
-    <description>This multi-scraper Add-On does all the hard work for you. Scouring sites and tracking down as many links as possible, all of which are for Strictly HD content that is all viewable [I]without[/I]  Real-Debrid. Search, Click, Sit back and Enjoy.</description>
-    <disclaimer>I do not own, nor host any content provided within this add-on. All links are gathered from publicly available resources.</disclaimer>
-    <language>english</language>
-    <platform>all</platform>
-    <license>GNU General Public License v3.0</license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <news></news>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-        <screenshot></screenshot>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="plugin.video.subzero" name="[COLOR blue]SubZero[/COLOR]" version="1.0.4" provider-name="Razer">
 <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1318,31 +1219,6 @@ http://www.hometheater.co.il</description>
     <disclaimer lang="en">Credit: Merlin Project And Livestreams Pro</disclaimer>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.tempusreborn" name="[COLORcyan]Tempus Reborn[/COLOR]" version="1.8" provider-name="ATrain, Jen">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.nanscrapers" version="0.5.5" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.urlresolver" version="1.2.0" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Seasonal Movies</summary>
-        <description lang="en">The developer does not own any content found within this addon. All content is found across the web freely. The developer is in no way affiliated with Kodi or XBMC.</description>
-        <platform>all</platform>
-        <website>www.noobsandnerds.com</website>
-        <video_guide>xtOqLY5PJDY</video_guide>
-    </extension>
 </addon>
 
 <addon id="plugin.video.Test"
@@ -1375,36 +1251,6 @@ http://www.hometheater.co.il</description>
     <description lang="en">[COLOR red]All channels from around the world/Movie/Child Movie/Streamax.tv/Swefilm.Tv/http://dreamfilmhd.bz// YouTube/Sports Replays/Filmon.TV/Radio/Ace Stream/Music/Live Sport/LiveStream/follow me on FB/Twitter
 Halow TV Add-on
 http://halowtv.org[/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.thepyramid"
-       name="The Pyramid"
-       version="1.73"
-       provider-name="TomBraiderMovies">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLORblue]Pyramid All In One Add On[/COLOR]</summary>
-    <description lang="en">[COLORblue]This Is A 3rd Party Add On And Is Not Linked To Kodi In Any Way. For Support Tweet @PyramidAddOn. All The Content We Provide Is Freely Available On The Internet. We Do Not Store Any Content Ourselves.[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -1835,6 +1681,30 @@ Addons Included
 	</extension>
 </addon>
 
+<addon id="script.incursion.artwork" version="1.0.7" name="Incursion Artwork" provider-name="Incursion">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Incursion Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.incursion.metadata" version="1.0.3" name="Incursion Metadata" provider-name="Incursion">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Incursion Addon</summary>
+		<description>Metadata for Incursion are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="script.module.covenant" name="covenant Module" version="2.16" provider-name="covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -1858,6 +1728,18 @@ Addons Included
 	</extension>
 </addon>
 
+<addon id="script.module.incursion" name="Incursion Module" version="1.17" provider-name="Incursion">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Incursion</summary>
+	</extension>
+</addon>
+
 <addon id="script.module.placenta" name="Placenta Module" version="1.1.9" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -1867,17 +1749,6 @@ Addons Included
 		<platform>all</platform>
 		<summary lang="en">Placenta</summary>
 		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
-	</extension>
-</addon>
-
-<addon id="script.module.salts" name="SALTS Common Libraries" version="0.1.9" provider-name="k3l3vra">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Credit to TKnorris</summary>
 	</extension>
 </addon>
 
@@ -1925,34 +1796,6 @@ Addons Included
 	<extension point="xbmc.addon.metadata">
 		<summary>Metadata for the Rebirth Addon</summary>
 		<description>Metadata for Rebirth are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="script.salts.themepak" version="0.0.6" name="SALTS Themepak" provider-name="tknorris">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.script" library="default.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Themes for the SALTS Addon</summary>
-        <description>Themes for SALTS are maintained separately to make distribution of the the addon itself easier/faster.</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="script.specto.media" version="2016.06.30" name="Specto Themepak" provider-name="mrknow" >
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.script" library="default.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for Specto</summary>
-		<description>Themes for Specto.</description>
 		<platform>all</platform>
 	</extension>
 </addon>
