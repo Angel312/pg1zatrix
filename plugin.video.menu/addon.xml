@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.2" provider-name="ANNE">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Menu van de Zatrix Built</summary>
+    <description lang="en">Niet Gebruiken/verwijderen!</description>
+    <disclaimer lang="en">Use it at your own risk.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <forum></forum>
+    <source></source>
+  </extension>
+</addon>
