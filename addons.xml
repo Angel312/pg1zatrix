@@ -1043,7 +1043,7 @@ Trakt On Deck - Reversed to show last played first.
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="2.1.5" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="2.2.0" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
@@ -1056,10 +1056,15 @@ Trakt On Deck - Reversed to show last played first.
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
+        <provides>audio</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Placenta</summary>
 		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
+The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
+This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.
+</disclaimer>
 		<platform>all</platform>
 		<license>Beerware rev. 42</license>
 		<assets>
@@ -1761,7 +1766,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.1.9" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.2.7" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
@@ -1770,6 +1775,8 @@ Addons Included
 		<platform>all</platform>
 		<summary lang="en">Placenta</summary>
 		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <license>Beerware rev. 42</license>
 	</extension>
 </addon>
 
