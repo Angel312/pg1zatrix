@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon  id="net.rieter.xot"
-        version="4.1.7~alpha3"
+        version="4.1.7~alpha10"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
         <import addon="xbmc.metadata" version="1.0"/>
         <import addon="xbmc.python" version="2.14.0"/>
-        <import addon="net.rieter.xot.channel.be" />
-        <import addon="net.rieter.xot.channel.de" />
-        <import addon="net.rieter.xot.channel.mtg" />
-        <import addon="net.rieter.xot.channel.mtv" />
-        <import addon="net.rieter.xot.channel.nick" />
-        <import addon="net.rieter.xot.channel.no" />
-        <import addon="net.rieter.xot.channel.nos" />
-        <import addon="net.rieter.xot.channel.regionalnl" />
-        <import addon="net.rieter.xot.channel.rtlnl" />
-        <import addon="net.rieter.xot.channel.sbsnl" />
-        <import addon="net.rieter.xot.channel.streams" />
-        <import addon="net.rieter.xot.channel.se" />
-        <import addon="net.rieter.xot.channel.uk" />
-        <import addon="net.rieter.xot.channel.videos" />
         <import addon="script.module.simplejson" version="3.3.0"/>
     </requires>
 
@@ -811,7 +797,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.incursion" version="0.1.15" name="Incursion" provider-name="Incursion">
+<addon id="plugin.video.incursion" version="0.1.16" name="Incursion" provider-name="Incursion">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.incursion" />
@@ -842,11 +828,12 @@
     			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
-v0.1.15 (FEB-2018)
-Fixed "Trakt - Mark as Watched" Issues
-Added Trakt Bookmarks Function
-Added Auto Resume Option
-Trakt On Deck - Reversed to show last played first.
+v0.1.16 (APR-2018)
+Scraper Fixes - 2ddl, chillax, allrls, movie4kis
+New Scrapers - pubfilmonline, rlsscn
+Settings cleanup
+Added polish fixes
+Slacked on documentation - slack update notes
 		</news>
 	</extension>
 </addon>
@@ -1043,7 +1030,7 @@ Trakt On Deck - Reversed to show last played first.
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="2.2.0" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="2.2.1" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
@@ -1754,7 +1741,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.incursion" name="Incursion Module" version="1.17A" provider-name="Incursion">
+<addon id="script.module.incursion" name="Incursion Module" version="1.18" provider-name="Incursion">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
