@@ -904,36 +904,6 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.JokerSports"
-       name="[COLORlime]Joker Sports[/COLOR]"
-       version="2.1"
-       provider-name="Maverick">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="repository.maverickrepo" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-		<import addon="plugin.video.youtube" version="3.0.0"/>
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-		<import addon="script.module.Sports" />
-		<import addon="script.module.ATFlive" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-       <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.kidstime"
 	name="KidsTime"
 	version="1.1.3"
@@ -1236,6 +1206,27 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
+<addon id="plugin.video.sportrepo" name="sportrepo" version="1.0" provider-name="ANNE">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="repository.PureRepo"/>
+    <import addon="repository.maverickrepo"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">sport repo's</summary>
+    <description lang="en">Niet Gebruiken/verwijderen!</description>
+    <disclaimer lang="en">Use it at your own risk.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <forum></forum>
+    <source></source>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.SportsDevil"
   version="12018.04.11"
@@ -1261,66 +1252,6 @@ http://www.hometheater.co.il</description>
     <description lang="en">Play videos of different ad-financed sports streaming sites.</description>
 	<disclaimer lang="en">SportsDevil does not provide any streams of its own; stream quality, content and copyright are responsibility of the ad-financed source web site. For updates - check the readme.</disclaimer>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.SportsMatrix"
-       name="[COLOR orange][B]Sports[/B][/COLOR][COLOR gray][B]Matrix[/B][/COLOR]"
-       version="1.1"
-       provider-name="@KodinityTV">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="repository.PureRepo" />
-    <import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-    <import addon="script.module.python.koding.aio" version="0.0.1"/>
-    <import addon="script.module.bybmodules"  version="0.0.0.1"/>
-    <import addon="script.module.resolveurl" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLOR orange][B]Sports[/B][/COLOR][COLOR gray][B]Matrix[/B][/COLOR] - Formerly Called [COLOR white][B]Pure[/B][/COLOR][COLOR dodgerblue][B]Sports[/B][/COLOR]</summary>
-    <description lang="en">[COLOR orange][B]Sports[/B][/COLOR][COLOR gray][B]Matrix[/B][/COLOR] - Live Sports Add-On Including 3PM Kick-Offs, Live Sports, American Live Sports and Many More</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.subzero" name="[COLOR blue]SubZero[/COLOR]" version="1.0.4" provider-name="Razer">
-<requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="script.module.resolveurl" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-    <import addon="plugin.video.youtube" />
-</requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Playlists Brought To You By Razer</summary>
-    <description lang="en">This is a new project, content added on a daily basis!</description>
-    <disclaimer lang="en">Credit: Merlin Project And Livestreams Pro</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
