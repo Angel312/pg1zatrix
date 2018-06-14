@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.ukodi1" name="ukodi1" version="0.0.5" provider-name="ukodi1">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="ukodi1">
+            <info compressed="false">http://ukodi1.com/_repo/addons.xml</info>
+            <checksum>http://ukodi1.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://ukodi1.com/_repo/</datadir>
+            <hashes>false</hashes>
+            <dir>
+				<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+			</dir>
+			<dir>
+				 <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+				 <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+				 <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+			</dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Welcome to the Ukodi1 Repository</summary>
+            <description></description>
+            <platform>all</platform>
+    </extension>
+</addon>
