@@ -833,24 +833,24 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.football.today" name="Football Today" version="3.0.5" provider-name="lambda,jsergio">
+<addon id="plugin.video.football.today" name="Football Today" version="3.0.6" provider-name="Mr Tron">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.simplejson" optional="true"/>
 		<import addon="script.module.parsedom" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
-		<import addon="script.module.urlresolver" version="3.0.22"/>
+		<import addon="script.module.resolveurl" version="5.0.06"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Football on demand</summary>
-		<description lang="en">Visit TVADDONS.ag for support</description>
+		<description lang="en"></description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<forum>http://forums.tvaddons.ag/forums/148-lambda-s-xbmc-addons</forum>
-		<source>https://offshoregit.com/lambda81/lambda-addons</source>
-		<website>https://offshoregit.com/lambda81/</website>
+		<forum>http://</forum>
+		<source>https://</source>
+		<website>https://</website>
 		<platform>all</platform>
 	</extension>
 </addon>
@@ -1005,26 +1005,6 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.last_played" name="Last Played" version="1.1.10" provider-name="Luis Rodrigues">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="default.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Last Played</summary>
-		<summary lang="pt">Ultimos Vistos</summary>
-		<description lang="en">List of the last movies, episodes and music played, including streaming sources from any addon</description>
-		<description lang="pt">Ultimos filmes, episodios e musicas tocadas, incluindo fontes de streaming de qualquer addon</description>
-		<disclaimer lang="en"></disclaimer>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
-		<source>https://github.com/5-star/plugin.video.last_played</source>
-	</extension>
-</addon>
-
 <addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.4" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1044,34 +1024,34 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.nbaondemand" name="NBA On-demand" version="2.0.7" provider-name="lambda,enen92,jsergio">
+<addon id="plugin.video.nbaondemand" name="NBA On-demand" version="2.0.8" provider-name="Mr Tron">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.simplejson" optional="true"/>
 		<import addon="script.module.parsedom" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
-		<import addon="script.module.urlresolver" version="3.0.24"/>
+		<import addon="script.module.resolveurl" version="5.0.06"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">NBA on demand</summary>
-		<description lang="en">Visit TVADDONS.ag for support</description>
+		<description lang="en"></description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<forum>http://forums.tvaddons.ag/forums/148-lambda-s-xbmc-addons</forum>
-		<source>https://offshoregit.com/lambda81/lambda-addons</source>
-		<website>https://offshoregit.com/lambda81/</website>
+		<forum>http://</forum>
+		<source>https://</source>
+		<website>https://</website>
 		<platform>all</platform>
 	</extension>
 </addon>
 
-<addon id="plugin.video.nhlondemand" name="NHL On-demand" version="2.0.7" provider-name="lambda,jsergio">
+<addon id="plugin.video.nhlondemand" name="NHL On-demand" version="2.0.9" provider-name="Mr Tron">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.simplejson" optional="true"/>
 		<import addon="script.module.parsedom" optional="true"/>
-		<import addon="script.module.urlresolver" version="3.0.24"/>
+		<import addon="script.module.resolveurl" version="5.0.06"/>
 		<import addon="plugin.video.youtube" optional="true"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
@@ -1079,16 +1059,16 @@ Fixed search issue caused by character accents
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">NHL on demand</summary>
-		<description lang="en">Visit TVADDONS.ag for support</description>
+		<description lang="en"></description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<forum>http://forums.tvaddons.ag/forums/148-lambda-s-xbmc-addons</forum>
-		<source>https://offshoregit.com/lambda81/lambda-addons</source>
-		<website>https://offshoregit.com/lambda81/</website>
+		<forum>http://</forum>
+		<source>https://</source>
+		<website>https://</website>
 		<platform>all</platform>
 	</extension>
 </addon>
 
-<addon id="plugin.video.placenta" version="2.3.2" name="Placenta" provider-name="Team Afterbirth">
+<addon id="plugin.video.placenta" version="2.3.4" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.placenta" />
@@ -1349,27 +1329,6 @@ http://halowtv.org[/COLOR]</description>
 
   </extension>
 
-</addon>
-
-<addon id="plugin.video.Universe" name="[COLOR red]Universe[/COLOR]" version="1.2.1" provider-name="Worldkodi">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="script.module.urlresolver"  version="2.1.2"/>
-    <import addon="script.module.liveresolver" version="0.1.24"/>
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-    <import addon="plugin.video.youtube" optional="true" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="Universe.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Universe Movies</summary>
-    <description lang="en">Movies To Watch For The Entire Family. Includes the Best copies of content available.</description>
-    <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon
@@ -1895,9 +1854,10 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.4.3" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.4.8" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
