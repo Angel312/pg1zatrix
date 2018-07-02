@@ -529,7 +529,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.31" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.32" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1025,7 +1025,7 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.4" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.5" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1761,7 +1761,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.afkboxtools2" name="Update Tools" version="2.1.8" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools" version="2.1.9" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
