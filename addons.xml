@@ -1761,7 +1761,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.afkboxtools2" name="Update Tools" version="2.1.9" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools" version="2.1.9A" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
