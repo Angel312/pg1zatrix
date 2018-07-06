@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon  id="net.rieter.xot"
-        version="4.1.7~alpha3"
+        version="4.1.7~alpha23"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
         <import addon="xbmc.metadata" version="1.0"/>
         <import addon="xbmc.python" version="2.14.0"/>
-        <import addon="net.rieter.xot.channel.be" />
-        <import addon="net.rieter.xot.channel.de" />
-        <import addon="net.rieter.xot.channel.mtg" />
-        <import addon="net.rieter.xot.channel.mtv" />
-        <import addon="net.rieter.xot.channel.nick" />
-        <import addon="net.rieter.xot.channel.no" />
-        <import addon="net.rieter.xot.channel.nos" />
-        <import addon="net.rieter.xot.channel.regionalnl" />
-        <import addon="net.rieter.xot.channel.rtlnl" />
-        <import addon="net.rieter.xot.channel.sbsnl" />
-        <import addon="net.rieter.xot.channel.streams" />
-        <import addon="net.rieter.xot.channel.se" />
-        <import addon="net.rieter.xot.channel.uk" />
-        <import addon="net.rieter.xot.channel.videos" />
         <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="inputstream.adaptive" version="2.0.19" optional="true" />
     </requires>
 
     <extension  point="xbmc.python.pluginsource"
@@ -32,6 +19,7 @@
     </extension>
 
     <extension point="xbmc.addon.metadata">
+        <!--<reuselanguageinvoker>false</reuselanguageinvoker>-->
         <platform>all</platform>
         <minversion>29000</minversion>
         <summary>Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
