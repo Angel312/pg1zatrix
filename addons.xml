@@ -197,7 +197,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.32" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.33" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1444,7 +1444,7 @@ Addons Included
         </extension>
     </addon>
 
-<addon id="repository.zatrix" name="Zatrix Repo" version="1.0.5" provider-name="Angel">
+<addon id="repository.zatrix" name="Zatrix Repo" version="1.0.6" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Zatrix Repository">
     <dir>
             <info compressed="false">https://raw.github.com/Angel312/pg1zatrix/master/addons.xml</info>
@@ -1460,6 +1460,21 @@ Addons Included
             <info compressed="false">https://raw.github.com/iamAngel/zatrix/master/addons.xml</info>
             <checksum>https://raw.github.com/iamAngel/zatrix/master/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.github.com/iamAngel/zatrix/master/</datadir>
+    </dir>
+    <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+            <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
+	<dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
