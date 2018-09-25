@@ -377,37 +377,6 @@ Added: Decimal license key support for Widevine and the Adaptive Stream add-on
   </extension>
 </addon>
 
-<addon id="plugin.video.covenant" version="2.1.34" name="Covenant" provider-name="Covenant">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.covenant" />
-		<import addon="script.covenant.artwork" version="1.0.0" />
-		<import addon="script.covenant.metadata" version="1.0.0" />
-		<import addon="script.module.urlresolver" version="3.0.0" />
-		<import addon="script.module.requests" />
-		<import addon="script.module.metahandler" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="covenant.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Covenant</summary>
-		<description lang="en">[I]A New Generation[/I][CR][CR][B]Covenant Movies and TV[/B][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-    	</assets>
-		<news></news>
-	</extension>
-</addon>
-
 
 <addon id="plugin.video.DecadoDocs" name="Decado Documentaries" version="1.0.3" provider-name="MetalKettle">
 
@@ -1584,30 +1553,6 @@ Addons Included
     </extension>
 </addon>
 
-<addon id="script.covenant.artwork" version="1.0.2" name="Covenant Artwork" provider-name="Covenant">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the Covenant Addon</summary>
-		<description></description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="script.covenant.metadata" version="1.0.0" name="Covenant Metadata" provider-name="Covenant">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Metadata for the Covenant Addon</summary>
-		<description>Metadata for Covenant are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
 <addon id="script.elysium.artwork" version="2017.06.27" name="Elysium Artwork" provider-name="Elysium">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -1671,18 +1616,6 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.covenant" name="covenant Module" version="2.16" provider-name="covenant">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.beautifulsoup4"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">covenant</summary>
-	</extension>
-</addon>
-
 <addon id="script.module.exodus" name="Exodus Module" version="1.00.026" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -1694,7 +1627,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.incursion" name="Incursion Module" version="1.20B" provider-name="Incursion">
+<addon id="script.module.incursion" name="Incursion Module" version="1.20C" provider-name="Incursion">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
@@ -1706,7 +1639,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.7.8" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.7.8A" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
