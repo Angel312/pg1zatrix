@@ -291,6 +291,28 @@ Added: Decimal license key support for Widevine and the Adaptive Stream add-on
   </extension>
 </addon>
 
+<addon id="plugin.program.zatrixnoti2" version="1.0.2"
+       name="Notifications" provider-name="ANNE">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.addon.common" optional="true" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary>TVADDONS NEWS</summary>
+  	<description>Receive Important Zatrix Notifications. Unsubscribe within Add-on Settings.</description>
+  	<disclaimer>We take no responsibility for any problems this plugin might in any way, form, shape or size cause.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+  	<source></source>
+  	<email></email>
+  </extension>
+</addon>
+
 <addon id="plugin.video.9anime.cypher" name="Cypher 9Anime" version="0.0.6" provider-name="DxCx/Cypher">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -311,7 +333,7 @@ Added: Decimal license key support for Widevine and the Adaptive Stream add-on
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.35" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.36" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -718,7 +740,7 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.7" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.8" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1356,7 +1378,7 @@ http://halowtv.org[/COLOR]</description>
 	</extension>
 </addon>
 
-<addon id="repository.PureRepo" name="[COLOR white][B]PureRepo[/B][/COLOR]" version="0.0.4" provider-name="@KodinityTV">
+<addon id="repository.PureRepo" name="[COLOR white][B]PureRepo[/B][/COLOR]" version="6.0" provider-name="@KodinityTV">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
@@ -1422,25 +1444,40 @@ Addons Included
     </extension>
 </addon>
 
-    <addon id="repository.ukodi1" name="ukodi1" version="0.0.5" provider-name="ukodi1">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
-        </requires>
-        <extension point="xbmc.addon.repository" name="ukodi1">
+    <addon id="repository.ukodi1" name="ukodi1" version="0.0.8" provider-name="ukodi1">
+       <extension point="xbmc.addon.repository" name="ukodi1">
+
+            <dir>
             <info compressed="false">http://ukodi1.com/_repo/addons.xml</info>
             <checksum>http://ukodi1.com/_repo/addons.xml.md5</checksum>
             <datadir zip="true">http://ukodi1.com/_repo/</datadir>
             <hashes>false</hashes>
+            </dir>
+
             <dir>
-				<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-			</dir>
-			<dir>
-				 <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-				 <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-				 <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-			</dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+            <hashes>false</hashes>
+        </dir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+
+		<dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Welcome to the Ukodi1 Repository</summary>
@@ -1524,7 +1561,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.afkboxtools2" name="Update Tools" version="2.1.9A" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools" version="2.1.10" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
