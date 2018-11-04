@@ -1568,6 +1568,22 @@ Addons Included
 	</extension>
 </addon>
 
+<addon id="resource.as" name="Auto Cleaner" version="1.0.0" provider-name="Merlin Project">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Auto Cleaner By Merlin!</summary>
+    <description lang="en">DO NOT LAUNCH/RUN FROM MY ADD-ONS (This Will Auto Launch At Startup)</description>
+	<disclaimer lang="en">You May Disable! Configure From Within Add-On Settings</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="script.afkboxtools2" name="Update Tools" version="2.1.10" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
@@ -1610,6 +1626,30 @@ Addons Included
 		<platform>all</platform>
 		<news>Added extra theme (thanks Will Martins)</news>
 	</extension>
+</addon>
+
+<addon id="script.enableit" version="0.0.2" name="Enable it!" provider-name="Lunatixz">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+    </requires>
+    <extension point="xbmc.python.script" defaultresolution="720p" library="default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Enable, disabled plugins...</summary>
+        <description lang="en">Kodi Krypton 17.x disables all plugins manually installed, This plugin enables all plugins within user parameters.</description>
+        <disclaimer lang="en">This software is a BETA release, bugs maybe common until final release.</disclaimer>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <source>https://github.com/Lunatixz/XBMC_Addons/tree/master/script.enableit</source>
+        <email>pseudotvlive@gmail.com</email>
+        <website>http://pseudotvlive.com</website>
+        <forum>http://pseudotvlive.com</forum>
+        <news></news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="script.exodus.artwork" version="1.0.6" name="Exodus Artwork" provider-name="Exodus">
@@ -1671,7 +1711,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.incursion" name="Incursion Module" version="1.20F" provider-name="Incursion">
+<addon id="script.module.incursion" name="Incursion Module" version="1.21" provider-name="Incursion">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
@@ -1683,7 +1723,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.7.8E" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.7.9" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
