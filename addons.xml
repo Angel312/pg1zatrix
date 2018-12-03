@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon  id="net.rieter.xot"
-        version="4.1.7~beta23"
+        version="4.1.7~beta34"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
-        <import addon="xbmc.metadata" version="1.0"/>
-        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="xbmc.metadata" version="1.0" />
+        <import addon="xbmc.python" version="2.14.0" />
         <import addon="inputstream.adaptive" version="2.0.19" optional="true" />
         <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
+        <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
     </requires>
 
     <extension  point="xbmc.python.pluginsource"
@@ -50,7 +51,7 @@
 
                 <item library="resources\menus\menu_channel_favs.py">
                     <label>30503</label>
-                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                    <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
                 </item>
 
                 <item library="resources\menus\menu_all_favs.py">
@@ -107,22 +108,24 @@
     </extension>
 
     <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <platform>all</platform>
         <summary lang="en">Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
         <description lang="en">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
         <disclaimer lang="en">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
         <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v4.1.7~beta23 - Changelog - 2018-10-07[/B]
+        <news>[B]Retrospect v4.1.7~beta33 - Changelog - 2018-11-26[/B]
 
 [B]Framework related[/B]
--
+* Fixed: Allow access to channel favorites from all locations (Fixes #1056)
+* Changed: Major rewrite to be PEP naming convention compliant for the core framework files.
 
 [B]GUI/Settings/Language related[/B]
 -
 
 [B]Channel related[/B]
-* Fixed: VRT.nu live streams (Fixes #1028)</news>
+* Fixed: NPO live radio streams (Fixes #1061)
+* Changed: Renamed Uitzendinggemist to NPO Start (Fixes #1059)</news>
     </extension>
 </addon>
 
@@ -670,7 +673,7 @@ Fixed search issue caused by character accents
 
 <addon id="plugin.video.jericho"
        name="Jericho"
-       version="2.1.5"
+       version="2.1.6"
        provider-name="Team Jericho">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -683,7 +686,6 @@ Fixed search issue caused by character accents
     <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" />
     <import addon="script.module.liveresolver" />
-    <import addon="plugin.video.veetle" />
     <import addon="plugin.video.SportsDevil" />
 
 

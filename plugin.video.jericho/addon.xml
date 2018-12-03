@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.jericho"
        name="Jericho"
-       version="2.1.5"
+       version="2.1.6"
        provider-name="Team Jericho">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -14,7 +14,6 @@
     <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" />
     <import addon="script.module.liveresolver" />
-    <import addon="plugin.video.veetle" />
     <import addon="plugin.video.SportsDevil" />
 
 
