@@ -427,32 +427,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.dss"
-       name="Dutch Sport Streams"
-       version="10.0.5"
-       provider-name="DSS">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.urlresolver" version="1.0.0"/>
-	<import addon="plugin.video.youtube" version="2.9.2" optional="true"/>
-    <import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="script.module.elementtree" version="1.2.8"/>
-    <import addon="plugin.video.f4mTester" version="2.2.3" optional="true" />
-	<import addon="script.module.liveresolver"  />
-	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
-
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-	<summary lang="en">Dutch Sport Streams</summary>
-    <description lang="en">Dutch Sport Streams</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.dubbedanime" version="1.0.4" name="Dubbed Anime" provider-name="#">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -944,6 +918,137 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
+<addon id="plugin.video.seren" version="0.1.18" name="Seren" provider-name="Nixgates">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.requests" version="2.19.1" />
+		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="plugin.video.youtube" version="6.2.0"/>
+		<import addon="script.module.addon.signals" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="seren.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Seren - This Addon is currently in beta. Please be aware there may be bugs present</summary>
+		<description lang="en">
+		</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author of this addon takes no responsibility for any 3rd party intergration or modification of this software, please ensure your use of this software abides by your local and insterstate laws.</disclaimer>
+		<assets>
+			<icon>temp-icon.png</icon>
+			<fanart>temp-fanart.png</fanart>
+		</assets>
+		<news>
+Version 0.1.18 Changelog:
+Added fallback from TMDB SSL certificate issues
+
+Version 0.1.17 Changelog:
+Removed Trakt Lists pagination (Fixed List Sorting)
+Complete work over of TV show continue watching display
+Added Sort Options for Next Up
+Renamed and moved Continue Watching Menu items to "Finish Watching" and added to their respective folders
+
+Version 0.1.16 Changelog:
+Fixed season items not being marked as watched
+Added try/except clauses to catch errors with get_hidden_items
+Adjust Info detection to better detect source information
+Added fallback if info list was empty for Source Select
+Added ability to show sources in source select as a single line in case of skins that do not support the multiline view
+Simplified provider failure output
+Added removal of unknown video keys for Kodi 18
+Removed trakt list lengths
+Premiumize module now removes items from account if it failed to resolve a link
+Premiumize cleanup now occurs at end of resolving
+Threads no longer marked as daemon as it doesn't work within Kodi
+Forced provider threads to return if getSources canceled
+Added fallback for gathering of hoster domains
+
+Version 0.1.15 Changelog:
+Fallback for DateTime ValueError
+Changed process of list generating so window shouldn't contain random number of items
+
+Version 0.1.14 Changelog:
+Increased Trakt Caching
+
+Version 0.1.13 Changelog:
+Source Select items now clickable
+Esc Key now closes Source Select dialog
+
+Version 0.1.12 Changelog:
+Added premiumize transfer database cleanup to maintenance script
+Changed scrobble ID back to Trakt as IMDB ID was unreliable causing trakt progress for some random show called pride
+if the IMDB ID wasn't available for an episode (sorry for my testers watching origin)
+Fixed issue with keepalive not dying causing scrobble issues and issues with Upnext
+Added 265 priority sort
+Some spelling mistakes
+Changed Upnext episode IDs to Trakt ID
+Added setUniqueIDs to tools.addDirectoryItem function
+Hide Item in trakt manager now actually sends the trakt request (Bad nix)
+
+Version 0.1.11 Changelog:
+Added workaround for Kodi 18 Widgets
+Increased support for Kodi 18 player
+Fixed issue with Kodi 18 where pre-emptive scraping wouldn't occur
+Adjusted menu content types so they now respect their content correctly
+
+Version 0.1.10 Changelog:
+Adjusted Migration Script so it no longer broke Super Faviorates
+Adjusted TMDB movie artwork to fix issue where it would display the wrong media (removed thumbnail)
+
+Version 0.1.09 Changelog:
+Increased torrent file identification
+Extended timeout for failed cache assit attempts to 3 hours
+Changed Trkat Scrobble Object to current playing item IMDB Number
+Fixed Trakt Scrobbling with Up Next Addon Intergration
+Fixed Trakt Scrobbling when seeking
+Added increased fallbacks for TV show metadata
+
+Version 0.1.08 Changelog:
+Restructed Settings page to use subsetting attribute
+Added Support for Context Menu Addon
+
+Version 0.1.07 Changelog:
+Added automatic migration from incorrect addon ID release
+Added Notification if no sources are found during pre-scrape
+Removed manual cache dialog prompt during pre-emptive scraping
+Cache inserts now threaded
+Added Semaphore to relieve thread pressure on database
+Fixed KeyError exception in TVDB episode function
+Custom Windows are now removed from scope with del
+Removed Please Check Internet Connection Dialog
+Added Logging for RD refresh Errors
+
+Version 0.1.06 Changelog:
+Added 3D filter Setting
+Added File Size Limit
+Added View types for Seasons, Episodes and Default for Menus
+Added Debrid Priorities
+Added Install UpNext Addon Setting
+Fixed capitalised Addon ID
+Fixed issue where TVDB token was not initially created
+Added ability to hide items from trakt manager
+Adjusted Source Select to multiline string
+Increased listitem size in custom source select window
+
+Version 0.1.05 Changelog:
+Added better Hoster support
+Changed hoster domains to (domain, name) tuple
+Fixed issue where color change would set color even if cancelled
+Cleaned up logging
+Fixed Manual Caching
+Adjusted Manual Caching display string
+Fixed View Types not being set
+		</news>
+	</extension>
+</addon>
+
 <addon id="plugin.video.SkyNet"
        name="[COLOR white]SkyNet[/COLOR]"
        version="5.0.1"
@@ -1035,7 +1140,7 @@ http://halowtv.org[/COLOR]</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.ufc-finest" name="Planet MMA" version="3.9" provider-name="DK">
+<addon id="plugin.video.ufc-finest" name="Planet MMA" version="4.0" provider-name="DK">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.simplejson" version="3.3.0"/>
@@ -1250,6 +1355,37 @@ http://halowtv.org[/COLOR]</description>
     <description lang="en">WWE Online (wweo.net) - The biggest WWE and Wrestling TV Show and videos Database. Watch WWE, TNA, UFC, FCW, ROH for free.</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.Yoda" version="2.1.6" name="[COLORgreen]Yoda[/COLOR]" provider-name="Yoda">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.Yoda" />
+		<import addon="script.Yoda.artwork" version="1.0.5" />
+		<import addon="script.Yoda.metadata" version="1.0.0" />
+		<import addon="script.module.resolveurl" version="5.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="Yoda.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">[COLORlime]Yoda[/COLOR]</summary>
+		<description lang="en">[COLOR aqua]Yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR].</description>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.jpg</icon>
+			<fanart>fanart.png</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.png</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.png</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.png</screenshot>
+		</assets>
+		<news></news>
+	</extension>
 </addon>
 
 <addon id="plugin.video.zanni" version="1.0.5" name="[B][COLOR orange]Zanni[/COLOR][/B]" provider-name="13Clowns">
