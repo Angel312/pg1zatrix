@@ -337,6 +337,26 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.AllSportzRecaps"
+	name="[COLOR red]Strike's AllSportz Recaps[/COLOR]"
+	version="1.0.6"
+	provider-name="Strike">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.resolveurl" version="5.0.15"/>
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Strikes YouTube Sports Playlists</summary>
+    <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.cartooncrazy" name="Cartoon Crazy" version="0.2.19" provider-name="@LuciferOnKodi">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1872,7 +1892,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.13clowns" version="1.0.9a" name="[B][COLORred]13Clowns[/COLOR] [COLOR white]Script.Module[/COLOR][/B]" provider-name="13Clowns">
+<addon id="script.module.13clowns" version="1.0.9f" name="[B][COLORred]13Clowns[/COLOR] [COLOR white]Script.Module[/COLOR][/B]" provider-name="13Clowns">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
