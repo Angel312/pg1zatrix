@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.sportrepo" name="sportrepo" version="1.1" provider-name="ANNE">
+<addon id="plugin.video.sportrepo" name="sportrepo" version="1.2" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="repository.PureRepo"/>
     <import addon="repository.maverickrepo"/>
-    <import addon="repository.ukodi1"/>
     <import addon="repository.Rising.Tides"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
