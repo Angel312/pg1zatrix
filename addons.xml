@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon  id="net.rieter.xot"
-        version="4.1.7~beta34"
+        version="4.1.7~beta36"
         name="Retrospect"
         provider-name="Bas Rieter">
 
@@ -114,18 +114,19 @@
         <description lang="en">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
         <disclaimer lang="en">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
         <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v4.1.7~beta33 - Changelog - 2018-11-26[/B]
+        <news>[B]Retrospect v4.1.7~beta36 - Changelog - 2018-12-08[/B]
 
 [B]Framework related[/B]
-* Fixed: Allow access to channel favorites from all locations (Fixes #1056)
-* Changed: Major rewrite to be PEP naming convention compliant for the core framework files.
+* Fixed: thumbs with url starting with `//` where not show correctly
 
 [B]GUI/Settings/Language related[/B]
--
+* Updated: minor Swedish language update
 
 [B]Channel related[/B]
-* Fixed: NPO live radio streams (Fixes #1061)
-* Changed: Renamed Uitzendinggemist to NPO Start (Fixes #1059)</news>
+* Added: `Search` to RTL XL (See #1069)
+* Added: `Recent` items to RTL XL (Fixes #1069)
+* Fixed: Match some more dates for VRT.nu (Fixes #1070)
+</news>
     </extension>
 </addon>
 
@@ -318,7 +319,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.37" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.38" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -391,8 +392,8 @@
 
 <addon id="plugin.video.ccloudtv"
        name="cCloud TV"
-       version="1.5.6"
-       provider-name="rattlehead">
+       version="1.5.7"
+       provider-name="Bane">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -413,7 +414,7 @@
     <provides>video executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>All the best from cCloud TV</summary>
+    <summary>All the best from cCloud Team Original Credits: Podgod and CA</summary>
     <description>cCloud is an open source cloud based social IPTV service. It is built by the community for the community, where streaming is just a click away. Just click, play and stream. Yes, it's that simple. Just go to [COLOR blue]http://ccloudtv.org[/COLOR] and enjoy:) Please report any channels that are down here [COLOR blue]http://www.tiny.cc/reportchs[/COLOR] Users can now check servers status which can be found at [COLOR blue]http://ccloudtv.org/status[/COLOR]
     </description>
 	<license>http://www.gnu.org/licenses/</license>
@@ -1235,19 +1236,18 @@ Fixed View Types not being set
 	</extension>
 </addon>
 
-<addon id="plugin.video.zanni" version="1.0.5" name="[B][COLOR orange]Zanni[/COLOR][/B]" provider-name="13Clowns">
+<addon id="plugin.video.zanni" version="2.0.1" name="[B][COLOR orange]Zanni[/COLOR][/B]" provider-name="13Clowns">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.13clowns" />
-        <import addon="script.13clowns.artwork" />
-        <import addon="script.13clowns.metadata" />
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.requests" />
+        <import addon="script.module.zanni" />
+        <import addon="script.zanni.artwork" />
+        <import addon="script.zanni.metadata" />
+        <import addon="script.module.resolveurl" version="5.0.17" />
+        <import addon="script.module.requests" version="2.19" />
         <import addon="script.module.youtube.dl" optional="true"/>
-        <import addon="plugin.video.youtube" version="3.0.0"/>
-        <import addon="script.module.addon.signals" version="0.0.1"/>
-        <import addon="script.module.lambdascrapers" version="1.6.0"/>
-        <import addon="script.module.metahandler" version="3.0.3" />
+        <import addon="plugin.video.youtube" />
+        <import addon="script.module.lambdascrapers" version="1.7.0"/>
+        <import addon="script.module.metahandler" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -1530,51 +1530,7 @@ Addons Included
   </extension>
 </addon>
 
-<addon id="script.13clowns.artwork" version="1.0.6" name="[B][COLORred]13Clowns[/COLOR] [COLOR white]Artwork[/COLOR][/B]" provider-name="13Clowns">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-	<summary lang="en">[COLORred]13Clowns - Artwork[/COLOR]</summary>
-	<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-	<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
-	<platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-	<assets>
-		<icon>icon.png</icon>
-		<fanart>fanart.jpg</fanart>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-    </assets>
-	<news></news>
-	</extension>
-</addon>
-
-<addon id="script.13clowns.metadata" version="1.0.2" name="[B][COLORred]13Clowns[/COLOR] [COLOR white]Metadata[/COLOR][/B]" provider-name="13Clowns">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">[COLORred]13Clowns - Metadata[/COLOR]</summary>
-		<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-		<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
-	<platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-	<assets>
-		<icon>icon.png</icon>
-		<fanart>fanart.jpg</fanart>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-    </assets>
-	<news></news>
-	</extension>
-</addon>
-
-<addon id="script.afkboxtools2" name="Update Tools" version="2.1.10" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools" version="2.1.11" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1601,6 +1557,49 @@ Addons Included
         <description>Spotimc lets you search for music, browse your playlists and play your favourite tunes right from XBMC.[CR][CR]This product uses SPOTIFY(R) CORE but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trade mark of the Spotify Group.[CR][CR]Special thanks to Seeleck for the logo and skin improvements.[CR][CR]Special thanks also for the CherryPy project, the DejaVu fonts project and the GNOME project (high contrast icons theme).</description>
         <disclaimer>It requires a Spotify premium account.</disclaimer>
     </extension>
+</addon>
+
+<addon id="script.ccloudmeta" name="cCloudMeta" version="1.0" provider-name="Bane,podgod, MetaTeam">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.futures" version="2.2.0"/>
+  </requires>
+	<provides>executable</provides>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+
+  </extension>
+
+  <extension point="xbmc.service" library="service.py" start="[login|startup]">
+  </extension>
+
+  <extension point="kodi.context.item" library="context_playable.py">
+    <provides>executable</provides>
+      <item>
+        <label>$ADDON[plugin.video.meta 31002]</label>
+        <visible>!System.HasAddon(context.meta) + [StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode)] + SubString(ListItem.FileNameAndPath, plugin.video.meta)</visible>
+      </item>
+  </extension>
+
+  <extension point="kodi.context.item" library="context_tvshow.py">
+    <provides>executable</provides>
+      <item>
+        <label>$ADDON[plugin.video.meta 31022]</label>
+        <visible>StringCompare(ListItem.dbtype,tvshow) + SubString(ListItem.Path, plugin.video.meta)</visible>
+      </item>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>For use with the cCloud TV Guide</summary>
+    <description>This is simply a fork of the Meta addon modified for use with the cCloud TV Guide. Credit and thanks to the Meta Team, Midraal, OpenELEQ and all devs involved.</description>
+    <supportedcontent>
+      <content>movies</content>
+      <content>tvshows</content>
+      <content>episodes</content>
+    </supportedcontent>
+  </extension>
 </addon>
 
 <addon id="script.enableit" version="0.0.2" name="Enable it!" provider-name="Lunatixz">
@@ -1651,28 +1650,6 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.13clowns" version="1.0.9f" name="[B][COLORred]13Clowns[/COLOR] [COLOR white]Script.Module[/COLOR][/B]" provider-name="13Clowns">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.beautifulsoup4"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-	<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
-	<platform>all</platform>
-	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-	<assets>
-		<icon>icon.png</icon>
-		<fanart>fanart.jpg</fanart>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-		<screenshot></screenshot>
-    </assets>
-	<news></news>
-	</extension>
-</addon>
-
 <addon id="script.module.incursion" name="Incursion Module" version="1.21A" provider-name="Incursion">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -1685,7 +1662,7 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.placenta" name="Placenta Module" version="1.7.9A" provider-name="Team Afterbirth">
+<addon id="script.module.placenta" name="Placenta Module" version="1.7.9B" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
@@ -1725,6 +1702,28 @@ Addons Included
             <license>GPL v3</license>
             <source>https://</source>
         </extension>
+</addon>
+
+<addon id="script.module.zanni" version="2.0" name="[B][COLOR orange]Zanni[/COLOR] [COLOR white]Script.Module[/COLOR][/B]" provider-name="13Clowns">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+	<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+	<platform>all</platform>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+    </assets>
+	<news></news>
+	</extension>
 </addon>
 
 <addon id="script.neptune.artwork" version="1.1.2" name="Neptune Rising Artwork" provider-name="Mr. Blamo">
@@ -1781,6 +1780,50 @@ This is a Non-profit resource, organized solely for educational purposes which i
 		<summary>Metadata for the Placenta Addon</summary>
 		<description>Metadata for Placenta are maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.zanni.artwork" version="2.0" name="[B][COLOR orange]Zanni[/COLOR] [COLOR white]Artwork[/COLOR][/B]" provider-name="13Clowns">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+	<summary lang="en">[COLORred]13Clowns - Artwork[/COLOR]</summary>
+	<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+	<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+	<platform>all</platform>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+    </assets>
+	<news></news>
+	</extension>
+</addon>
+
+<addon id="script.zanni.metadata" version="2.0" name="[B][COLOR orange]Zanni[/COLOR] [COLOR white]Metadata[/COLOR][/B]" provider-name="13Clowns">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">[COLORred]13Clowns - Metadata[/COLOR]</summary>
+		<description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+	<platform>all</platform>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+    </assets>
+	<news></news>
 	</extension>
 </addon>
 
