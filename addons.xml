@@ -1602,6 +1602,38 @@ Addons Included
   </extension>
 </addon>
 
+<addon id="script.ccloudtv" name="cCloud TV Guide" version="1.0" provider-name="Bane,PodGod,DeadPool">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="plugin.video.ccloudtv" version=""/>
+		<import addon="script.ccloudmeta" version=""/>
+		<import addon="script.module.beautifulsoup" version="3.2.1"/>
+		<import addon="script.module.simple.downloader" version="0.9.4"/>
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.simple.downloader" version="0.9.4"/>
+		<import addon="script.module.requests" />
+		<import addon="script.module.httplib2" />
+		<import addon="script.module.youtube.dl" optional="true"/>
+		<import addon="plugin.video.youtube" />
+		<import addon="script.module.urlresolver" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">cCloud TV Guide is a companion EPG for the cCloud TV addon</summary>
+		<summary lang="nl">TVgids met XMLTV en streaming ondersteuning</summary>
+		<description lang="nl">TVgids met XMLTV en streaming ondersteuning</description>
+		<disclaimer lang="en">cCloud TV Guide is a fork of FTV Guide by Bluezed and RayW1986, which is based on the original TV Guide addon by twinther. This is modified for use with the cCloud TV addon and will only work with addons from my repo. If you want an EPG with more channels, features and compatible with other addons, please use FTV Guide, Redegades TV Guide or iVue TV Guide</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GPLv2</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+	</extension>
+</addon>
+
 <addon id="script.enableit" version="0.0.2" name="Enable it!" provider-name="Lunatixz">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
