@@ -319,7 +319,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu" version="1.0.38" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.38" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
