@@ -854,7 +854,7 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="0.1.22" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="0.1.24" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -882,6 +882,14 @@ http://www.hometheater.co.il</description>
 			<fanart>temp-fanart.png</fanart>
 		</assets>
 		<news>
+
+Version 0.1.24 Changelog:
+Fixed Movie Watchlist Sort to content type "Show"
+
+Version 0.1.23 Changelog:
+Added Watchlist sorting
+Added extra fallbacks for trakt outages
+Changed tools setSetting to a function so Kodi modules are not initialised if there is an exception
 
 Version 0.1.22 Changelog:
 Re-installation and updating of provider packages now honors previous settings
