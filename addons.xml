@@ -1794,6 +1794,18 @@ Addons Included
         </extension>
 </addon>
 
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050" provider-name="S-media">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Yoda</summary>
+	</extension>
+</addon>
+
 <addon id="script.module.zanni" version="2.0" name="[B][COLOR orange]Zanni[/COLOR] [COLOR white]Script.Module[/COLOR][/B]" provider-name="13Clowns">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
