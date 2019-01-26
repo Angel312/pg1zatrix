@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon  id="net.rieter.xot"
-        version="4.1.7.43"
+        version="4.1.7.44"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
         <import addon="xbmc.metadata" version="1.0" />
         <import addon="xbmc.python" version="2.14.0" />
+        <import addon="script.module.requests" version="2.18.0" />
         <import addon="inputstream.adaptive" version="2.0.19" optional="true" />
         <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
         <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true" />
@@ -114,7 +115,7 @@
         <description lang="en">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
         <disclaimer lang="en">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
         <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v4.1.7.43 - Changelog - 2019-01-13[/B]
+        <news>[B]Retrospect v4.1.7.44 - Changelog - 2019-01-22[/B]
 
 [B]Framework related[/B]
 -
@@ -1246,32 +1247,30 @@ Fixed View Types not being set
   </extension>
 </addon>
 
-<addon id="plugin.video.Yoda" version="2.1.7" name="[COLORgreen]Yoda[/COLOR]" provider-name="Yoda">
+<addon id="plugin.video.Yoda" version="2.1.9" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.Yoda" />
-		<import addon="script.Yoda.artwork" version="1.0.5" />
+		<import addon="script.Yoda.artwork" version="1.0.0" />
 		<import addon="script.Yoda.metadata" version="1.0.0" />
-		<import addon="script.module.resolveurl" version="5.0.0" />
+		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="script.realdebrid.mod" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="Yoda.py">
 		<provides>video</provides>
+        <provides>audio</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">[COLORlime]Yoda[/COLOR]</summary>
-		<description lang="en">[COLOR aqua]Yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR].</description>
-		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<description>[COLOR aqua]Yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR]</description>
+        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!
+</disclaimer>
 		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<assets>
 			<icon>icon.jpg</icon>
 			<fanart>fanart.png</fanart>
-    			<screenshot>resources/screenshots/screenshot-01.png</screenshot>
-    			<screenshot>resources/screenshots/screenshot-02.png</screenshot>
-    			<screenshot>resources/screenshots/screenshot-03.png</screenshot>
 		</assets>
 		<news></news>
 	</extension>
@@ -1796,15 +1795,16 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050C" provider-name="S-media">
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050D" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="script.module.requests" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Yoda</summary>
+		<description></description>
+        <disclaimer lang="en"></disclaimer>
 	</extension>
 </addon>
 
@@ -1884,6 +1884,25 @@ This is a Non-profit resource, organized solely for educational purposes which i
 		<summary>Metadata for the Placenta Addon</summary>
 		<description>Metadata for Placenta are maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.realdebrid.mod" name="RealDebrid-Mod" version="1.1.2" provider-name="ptom">
+	<requires>
+        <import addon="script.module.requests" version="2.3.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<description lang="en">Unofficial RealDebrid client. Manage your torrents, unrestricted links and view host statuses all within Kodi.</description>
+        <summary>Unofficial RealDebrid client. Manage your torrents, unrestricted links and view host statuses all within Kodi.</summary>
+        <news>v0.5 - added "Play using RealDebrid" to context menu</news>
+        <website>http://www.ptom.co.uk</website>
+		<platform>all</platform>
+		<language>en</language>
+		<email>ptom98@gmail.com</email>
 	</extension>
 </addon>
 
