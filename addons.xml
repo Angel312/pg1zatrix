@@ -1795,7 +1795,7 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050D" provider-name="S">
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050E" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
