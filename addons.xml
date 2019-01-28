@@ -1061,6 +1061,34 @@ Fixed View Types not being set
   </extension>
 </addon>
 
+<addon id="plugin.video.sport365.live" name="Sport365" version="1.0" provider-name="GalAnonim">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.cronxbmc" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sport365</summary>
+    <description lang="en">Sport365</description>
+    <disclaimer lang="en">Live Streams from sport365.live!</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.png</fanart>
+  </assets>
+  <news>
+   Pierwsza wersja :)
+  </news>
+  </extension>
+</addon>
+
 <addon id="plugin.video.sportrepo" name="sportrepo" version="1.2" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1247,7 +1275,7 @@ Fixed View Types not being set
   </extension>
 </addon>
 
-<addon id="plugin.video.Yoda" version="2.1.9A" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
+<addon id="plugin.video.Yoda" version="2.1.9B" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.Yoda" />
@@ -1795,7 +1823,7 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050E" provider-name="S">
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.050F" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
