@@ -2,7 +2,6 @@
 <addon id="plugin.video.sportrepo" name="sportrepo" version="1.2" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="repository.PureRepo"/>
     <import addon="repository.maverickrepo"/>
     <import addon="repository.Rising.Tides"/>
   </requires>
