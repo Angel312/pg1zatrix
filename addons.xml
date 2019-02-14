@@ -1723,7 +1723,7 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.060" provider-name="S">
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.061" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
