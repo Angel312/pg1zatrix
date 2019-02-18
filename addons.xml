@@ -1202,7 +1202,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.Yoda" version="2.2.0" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
+<addon id="plugin.video.Yoda" version="2.2.1" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.Yoda" />
@@ -1721,7 +1721,7 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.061B" provider-name="S">
+<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.062" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
