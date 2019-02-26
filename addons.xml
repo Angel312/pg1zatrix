@@ -680,7 +680,7 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.10" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.11" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -884,6 +884,146 @@ http://www.hometheater.co.il</description>
     <forum>n/a</forum>
     <website>n/a</website>
   </extension>
+</addon>
+
+<addon  id="plugin.video.retrospect"
+        version="4.1.8.3"
+        name="Retrospect"
+        provider-name="Bas Rieter">
+
+    <requires>
+        <import addon="xbmc.metadata" version="1.0" />
+        <import addon="xbmc.python" version="2.23.0" />
+        <import addon="script.module.requests" version="2.18.0" />
+        <import addon="inputstream.adaptive" version="2.0.19" />
+        <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
+        <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    </requires>
+
+    <extension  point="xbmc.python.pluginsource"
+                library="default.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="migrateservice.py" />
+
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\menus\menu_queue.py">
+                <label>30541</label>
+                <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)</visible>
+            </item>
+
+            <item library="resources\menus\menu_refresh.py">
+                <label>30529</label>
+                <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
+            </item>
+
+            <item library="resources\menus\menu_hide_channel.py">
+                <label>30574</label>
+                <visible>ListItem.Property(RetrospectChannel)</visible>
+            </item>
+
+            <item library="resources\menus\menu_cloak.py">
+                <label>30563</label>
+                <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectCloaked)+!ListItem.Property(RetrospectFavorite)</visible>
+            </item>
+
+            <item library="resources\menus\menu_uncloak.py">
+                <label>30564</label>
+                <visible>ListItem.Property(RetrospectCloaked)</visible>
+            </item>
+
+            <!-- Favorites menu -->
+            <menu>
+                <label>30575</label>
+
+                <item library="resources\menus\menu_channel_favs.py">
+                    <label>30503</label>
+                    <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_all_favs.py">
+                    <label>30500</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_add_fav.py">
+                    <label>30504</label>
+                    <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectFavorite)</visible>
+                </item>
+
+                <item library="resources\menus\menu_remove_fav.py">
+                    <label>30506</label>
+                    <visible>ListItem.Property(RetrospectFavorite)</visible>
+                </item>
+            </menu>
+
+            <!-- Retrospect Menu -->
+            <menu>
+                <label>30572</label>
+
+                <item library="resources\menus\menu_bitrate.py">
+                    <label>30577</label>
+                    <visible>ListItem.Property(Retrospect)+!ListItem.Property(RetrospectCategory)</visible>
+                </item>
+
+                <item library="resources\menus\menu_channelsettings.py">
+                    <label>30069</label>
+                    <visible>ListItem.Property(RetrospectChannelSettings)+!ListItem.Property(RetrospectCategory)</visible>
+                </item>
+
+                <item library="resources\menus\menu_channel_selection.py">
+                    <label>30507</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_country_selection.py">
+                    <label>30576</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_settings.py">
+                    <label>30528</label>
+                    <visible>ListItem.Property(Retrospect)</visible>
+                </item>
+
+                <!--item library="resources\menus\menu_install_widevine.py">
+                    <label>30532</label>
+                    <visible>ListItem.Property(Retrospect)+System.HasAddon(inputstream.adaptive)+System.HasAddon(script.module.inputstreamhelper)</visible>
+                </item-->
+            </menu>
+        </menu>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <platform>all</platform>
+        <summary lang="en">Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
+        <description lang="en">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
+        <disclaimer lang="en">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
+        <language>en nl de se no lt lv fi</language>
+        <news>[B]Retrospect v4.1.8.3 - Changelog - 2019-02-20[/B]
+
+!! Due to the changing of the add-on ID, there is an extra add-on data migration step required. This happens as soon as you install the new version. !!
+
+[B]Framework related[/B]
+-
+
+[B]GUI/Settings/Language related[/B]
+-
+
+[B]Channel related[/B]
+* Fixed: Some ViaFree streams did not play (Fixes #1107)
+* Fixed: some radio live streams did not play (Fixes #1108)
+
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="plugin.video.seren" version="0.1.29" name="Seren" provider-name="Nixgates">
@@ -1202,23 +1342,23 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.Yoda" version="2.2.1A" name="[COLORgreen]Yoda[/COLOR]" provider-name="S">
+<addon id="plugin.video.yoda" version="1.0.0" name="[COLORgreen]yoda[/COLOR]" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.Yoda" />
-		<import addon="script.Yoda.artwork" version="1.0.0" />
-		<import addon="script.Yoda.metadata" version="1.0.0" />
+		<import addon="script.module.yoda" />
+		<import addon="script.yoda.artwork" version="1.0.0" />
+		<import addon="script.yoda.metadata" version="1.0.0" />
 		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" version="1.0.0" />
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="Yoda.py">
+	<extension point="xbmc.python.pluginsource" library="yoda.py">
 		<provides>video</provides>
         <provides>audio</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">[COLORlime]Yoda[/COLOR]</summary>
-		<description>[COLOR aqua]Yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR]</description>
+		<summary lang="en">[COLORlime]yoda[/COLOR]</summary>
+		<description>[COLOR aqua]yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR]</description>
         <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!
 </disclaimer>
 		<platform>all</platform>
@@ -1720,14 +1860,14 @@ Addons Included
         </extension>
 </addon>
 
-<addon id="script.module.Yoda" name="[COLORgreen]Yoda Module[/COLOR]" version="1.00.065" provider-name="S">
+<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.0.0" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">Yoda</summary>
+		<summary lang="en">yoda</summary>
 		<description></description>
         <disclaimer lang="en"></disclaimer>
 	</extension>
