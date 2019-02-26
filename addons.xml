@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.41" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.42" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1635,7 +1635,7 @@ Addons Included
   </extension>
 </addon>
 
-<addon id="script.afkboxtools2" name="Update Tools" version="2.1.13" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools" version="2.1.14" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
