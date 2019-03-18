@@ -324,6 +324,38 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.13clowns" version="2.0.16" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="13Clowns">
+   <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.13clowns" />
+        <import addon="script.13clowns.artwork" />
+        <import addon="script.13clowns.metadata" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.metahandler" />
+        <import addon="script.module.civitasscrapers" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="clowns.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[B][COLOR red]13Clowns[/COLOR] Video[/B] is a free portal for circus freaks to see the best stuff.</summary>
+        <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.gif</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/screenshots/1.png</screenshot>
+        <screenshot>resources/screenshots/2.png</screenshot>
+        <screenshot>resources/screenshots/3.png</screenshot>
+    </assets>
+    <news></news>
+    </extension>
+</addon>
+
 <addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.42" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -573,35 +605,6 @@ Fixed Trakt On Deck Magical Dissapearing Act
 Fixed search issue caused by character accents
 		</news>
 	</extension>
-</addon>
-
-<addon id="plugin.video.jericho"
-       name="Jericho"
-       version="2.1.6"
-       provider-name="Team Jericho">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.1.1"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.youtube.dl" />
-    <import addon="plugin.video.youtube" />
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" />
-    <import addon="script.module.liveresolver" />
-    <import addon="plugin.video.SportsDevil" />
-
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Streams voor XBMC / KODI!</summary>
-    <description lang="en"></description>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.video.justsports" name=" [COLOR white][B]J[COLOR gold]UST [COLOR white][B]S[COLOR gold]PORTS[/B][/COLOR]" version="2.4" provider-name="UKODI1">
@@ -886,6 +889,145 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
+<addon  id="plugin.video.retrospect"
+        version="4.1.8.9"
+        name="Retrospect"
+        provider-name="Bas Rieter">
+
+    <requires>
+        <import addon="xbmc.metadata" version="1.0" />
+        <import addon="xbmc.python" version="2.23.0" />
+        <import addon="script.module.requests" version="2.18.0" />
+        <import addon="inputstream.adaptive" version="2.0.19" />
+        <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
+        <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    </requires>
+
+    <extension  point="xbmc.python.pluginsource"
+                library="default.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="migrateservice.py" />
+
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\menus\menu_queue.py">
+                <label>30541</label>
+                <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)</visible>
+            </item>
+
+            <item library="resources\menus\menu_refresh.py">
+                <label>30529</label>
+                <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
+            </item>
+
+            <item library="resources\menus\menu_hide_channel.py">
+                <label>30574</label>
+                <visible>ListItem.Property(RetrospectChannel)</visible>
+            </item>
+
+            <item library="resources\menus\menu_cloak.py">
+                <label>30563</label>
+                <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectCloaked)+!ListItem.Property(RetrospectFavorite)</visible>
+            </item>
+
+            <item library="resources\menus\menu_uncloak.py">
+                <label>30564</label>
+                <visible>ListItem.Property(RetrospectCloaked)</visible>
+            </item>
+
+            <!-- Favorites menu -->
+            <menu>
+                <label>30575</label>
+
+                <item library="resources\menus\menu_channel_favs.py">
+                    <label>30503</label>
+                    <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_all_favs.py">
+                    <label>30500</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_add_fav.py">
+                    <label>30504</label>
+                    <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectFavorite)</visible>
+                </item>
+
+                <item library="resources\menus\menu_remove_fav.py">
+                    <label>30506</label>
+                    <visible>ListItem.Property(RetrospectFavorite)</visible>
+                </item>
+            </menu>
+
+            <!-- Retrospect Menu -->
+            <menu>
+                <label>30572</label>
+
+                <item library="resources\menus\menu_bitrate.py">
+                    <label>30577</label>
+                    <visible>ListItem.Property(Retrospect)+!ListItem.Property(RetrospectCategory)</visible>
+                </item>
+
+                <item library="resources\menus\menu_channelsettings.py">
+                    <label>30069</label>
+                    <visible>ListItem.Property(RetrospectChannelSettings)+!ListItem.Property(RetrospectCategory)</visible>
+                </item>
+
+                <item library="resources\menus\menu_channel_selection.py">
+                    <label>30507</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_country_selection.py">
+                    <label>30576</label>
+                    <visible>ListItem.Property(RetrospectChannel)</visible>
+                </item>
+
+                <item library="resources\menus\menu_settings.py">
+                    <label>30528</label>
+                    <visible>ListItem.Property(Retrospect)</visible>
+                </item>
+
+                <!--item library="resources\menus\menu_install_widevine.py">
+                    <label>30532</label>
+                    <visible>ListItem.Property(Retrospect)+System.HasAddon(inputstream.adaptive)+System.HasAddon(script.module.inputstreamhelper)</visible>
+                </item-->
+            </menu>
+        </menu>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <platform>all</platform>
+        <summary lang="en">Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
+        <description lang="en">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
+        <disclaimer lang="en">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
+        <language>en nl de se no lt lv fi</language>
+        <news>[B]Retrospect v4.1.8.9 - Changelog - 2019-03-16[/B]
+
+!! Due to the changing of the add-on ID, there is an extra add-on data migration step required. This happens as soon as you install the new version. !!
+
+[B]Framework related[/B]
+* Fixed: fromtimestamp issue with out of range timestamps (See #1136)
+
+[B]GUI/Settings/Language related[/B]
+-
+
+[B]Channel related[/B]
+* Fixed: timestamp issue with cookies in NPO Channel (Fixes #1136)
+* Fixed: For some NPO live streams the audio stops after some time (Fixes #1134)
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.seren" version="0.1.35" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -1090,6 +1232,35 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
+<addon
+  id="plugin.video.SportsDevil"
+  version="12018.09.20"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="plugin.video.f4mTester" />
+   <import addon="script.module.slproxy" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SportsDevil</summary>
+    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
+    <disclaimer lang="en">There can only be one.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.tvone11" name="tvOne11" version="8" provider-name="RACC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1114,25 +1285,33 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.ufc-finest" name="Planet MMA" version="4.0" provider-name="DK">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="script.module.urlresolver"  version="3.0.32"/>
-    <import addon="script.module.resolveurl" version="5.0.00"/>
-    <import addon="script.module.liveresolver" version="0.1.24"/>
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-    <import addon="plugin.video.youtube" optional="true" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+<addon id="plugin.video.ufc-finest" name="Planet MMA" version="4.2" provider-name="DK">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <import addon="script.module.dateutil" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+        <!--<import addon="script.module.urlresolver" />-->
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Planet MMA</summary>
-    <description lang="en">Planet MMA - All your MMA needs.</description>
-    <platform>all</platform>
-  </extension>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Planet MMA.</summary>
+        <description lang="en">All your MMA needs</description>
+        <disclaimer lang="en">None of the videos are hosted by this site. Streams hosted from sites like Openload and HLS sources available over Internet are embedded here. This Addon is not responsible for the legality of the content. For legal issues, please contact appropriate media file owners/hosters.</disclaimer>
+        <platform>all</platform>
+        <website/>
+        <video_guide>https://</video_guide>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
 </addon>
 
 
@@ -1318,6 +1497,44 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
+<addon id="repository.atreides" name="Atreides Repository" version="0.0.3" provider-name="House Atreides">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Atreides Repository">
+        <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipfiles/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipfiles/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipfiles/</datadir>
+        <hashes>false</hashes>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>House Atreides Official Repository</summary>
+        <description>House Atreides Official Repository</description>
+        <platform>all</platform>
+        <genre>movies,usa</genre>
+    </extension>
+</addon>
+
 <addon id="repository.jsergio" name="jsergio repo" version="1.0.3" provider-name="jsergio">
 	<extension point="xbmc.addon.repository" name="jsergio repo">
         <dir>
@@ -1381,26 +1598,6 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
 		<description>Find any type of content</description>
 		<platform>all</platform>
 	</extension>
-</addon>
-
-<addon id="repository.tknorris.beta" name="tknorris Beta Testing Repository" version="1.0.5" provider-name="tknorris">
-    <extension point="xbmc.addon.repository" name="tknorris beta testing repository">
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>This is used ONLY for beta testing</summary>
-        <description>Beta testing only!!!
-DO NOT INSTALL UNLESS YOU WISH TO PARTICIPATE IN BETA TESTING
-
-Addons Included
-    - 1Channel (Beta)
-    - 1Channel Thempak
-    - SALTS (Beta)
-    - SALTS Themepak
-    - Trakt (Beta)
-    - Trakt List Manager (Alpha)
-        </description>
-        <platform>all</platform>
-    </extension>
 </addon>
 
 <addon id="repository.ukturk" name="UKTurk Addon Repository" version="1.0.8" provider-name="UKTurk">
@@ -1510,6 +1707,50 @@ Addons Included
 	<disclaimer lang="en">You May Disable! Configure From Within Add-On Settings</disclaimer>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="script.13clowns.artwork" version="2.0.2" name="[B][COLOR red]13Clowns[/COLOR] Artwork[/B]" provider-name="13Clowns">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+    <summary lang="en">[B][COLOR red]13Clowns[/COLOR] Artwork[/B] is a free portal for circus freaks to see the best stuff.</summary>
+    <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart></fanart>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+    </assets>
+    <news></news>
+    </extension>
+</addon>
+
+<addon id="script.13clowns.metadata" version="2.0.1" name="[B][COLOR red]13Clowns[/COLOR] Metadata[/B]" provider-name="13Clowns">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[B][COLOR red]13Clowns[/COLOR] Metadata[/B] is a free portal for circus freaks to see the best stuff.</summary>
+    <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart></fanart>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+    </assets>
+    <news></news>
+    </extension>
 </addon>
 
 <addon id="script.afkboxtools2" name="Update Tools" version="2.1.14" provider-name="AFK">
@@ -1664,7 +1905,34 @@ Addons Included
 	</extension>
 </addon>
 
-<addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.5" provider-name="CivitasAdmin">
+<addon id="script.module.13clowns" version="2.0.16" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="13Clowns">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="script.module.beautifulsoup4"/>
+        <import addon="script.module.simplejson"/>
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+    <summary lang="en">[B][COLOR red]13Clowns[/COLOR] Script.Module[/B] is a free portal for circus freaks to see the best stuff.</summary>
+    <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart></fanart>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+    </assets>
+    <news></news>
+    </extension>
+</addon>
+
+<addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.5.1" provider-name="CivitasAdmin">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.beautifulsoup4"/>
