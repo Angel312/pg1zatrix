@@ -429,7 +429,7 @@
 
 <addon id="plugin.video.ccloudtv"
        name="cCloud TV"
-       version="1.5.7"
+       version="1.5.8"
        provider-name="Bane">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
@@ -445,7 +445,6 @@
 	<import addon="script.module.addon.common" />
 	<import addon="script.module.simplejson" version="3.3.0"/>
     <import addon="script.common.plugin.cache" version="2.5.5"/>
-    <import addon="script.tvaddons.debug.log" optional="true" />
 </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video executable</provides>
@@ -1261,7 +1260,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.tvone11" name="tvOne11" version="8" provider-name="RACC">
+<addon id="plugin.video.tvone11" name="tvOne11" version="13" provider-name="RACC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.livestreamer" />
@@ -1825,38 +1824,6 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="script.ccloudtv" name="cCloud TV Guide" version="1.0" provider-name="Bane,PodGod,DeadPool">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.simplejson" version="2.0.10"/>
-		<import addon="plugin.video.ccloudtv" version=""/>
-		<import addon="script.ccloudmeta" version=""/>
-		<import addon="script.module.beautifulsoup" version="3.2.1"/>
-		<import addon="script.module.simple.downloader" version="0.9.4"/>
-		<import addon="script.module.beautifulsoup4" />
-		<import addon="script.module.simple.downloader" version="0.9.4"/>
-		<import addon="script.module.requests" />
-		<import addon="script.module.httplib2" />
-		<import addon="script.module.youtube.dl" optional="true"/>
-		<import addon="plugin.video.youtube" />
-		<import addon="script.module.urlresolver" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.script" library="addon.py"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">cCloud TV Guide is a companion EPG for the cCloud TV addon</summary>
-		<summary lang="nl">TVgids met XMLTV en streaming ondersteuning</summary>
-		<description lang="nl">TVgids met XMLTV en streaming ondersteuning</description>
-		<disclaimer lang="en">cCloud TV Guide is a fork of FTV Guide by Bluezed and RayW1986, which is based on the original TV Guide addon by twinther. This is modified for use with the cCloud TV addon and will only work with addons from my repo. If you want an EPG with more channels, features and compatible with other addons, please use FTV Guide, Redegades TV Guide or iVue TV Guide</disclaimer>
-		<language></language>
-		<platform>all</platform>
-		<license>GPLv2</license>
-		<forum></forum>
-		<website></website>
-		<email></email>
-		<source></source>
-	</extension>
-</addon>
-
 <addon id="script.enableit" version="0.0.2" name="Enable it!" provider-name="Lunatixz">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
@@ -2029,7 +1996,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
         </extension>
 </addon>
 
-<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.0.3A" provider-name="S">
+<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.0.6" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
