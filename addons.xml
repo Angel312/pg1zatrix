@@ -1905,7 +1905,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
 	</extension>
 </addon>
 
-<addon id="script.module.13clowns" version="2.0.16" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="13Clowns">
+<addon id="script.module.13clowns" version="2.0.17" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="13Clowns">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.beautifulsoup4"/>
@@ -1932,7 +1932,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
     </extension>
 </addon>
 
-<addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.5.1" provider-name="CivitasAdmin">
+<addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.5.2" provider-name="CivitasAdmin">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.beautifulsoup4"/>
