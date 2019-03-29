@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.13clowns" version="2.0.16" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="13Clowns">
+<addon id="plugin.video.13clowns" version="2.0.17" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="13Clowns">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
@@ -1179,7 +1179,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.1" provider-name="Bugatsinho">
+<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.2" provider-name="Bugatsinho">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests" version="2.3.0"/>
@@ -1201,12 +1201,10 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
     <icon>icon.png</icon>
     <fanart>fanart.png</fanart>
   </assets>
-  <news>2.5.0 09-03-2019
-- add f4mtester dependency
-- re-organize addon
-- view links in folder mode(to avoid multi-requests)
-- disable ads threads
-- use of f4m to play the streams</news>
+  <news>2.5.2 23-03-2019
+- add inputstream option for playback(settings)
+- add alternatives domains and language support
+      (https://github.com/bugatsinho/bugatsinho.github.io/pull/15)</news>
   </extension>
 </addon>
 
@@ -1432,7 +1430,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.yoda" version="2.0.1" name="[COLORgreen]yoda[/COLOR]" provider-name="S">
+<addon id="plugin.video.yoda" version="2.0.2" name="[COLORgreen]yoda[/COLOR]" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.yoda" />
@@ -1872,7 +1870,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
 	</extension>
 </addon>
 
-<addon id="script.module.13clowns" version="2.0.17" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="13Clowns">
+<addon id="script.module.13clowns" version="2.0.18" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="13Clowns">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.beautifulsoup4"/>
@@ -1996,7 +1994,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
         </extension>
 </addon>
 
-<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.0.6" provider-name="S">
+<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.0.7" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
