@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.custombuild" name="Zatrix Repo" version="4.0.1" provider-name="Angel">
-	<extension point="xbmc.addon.repository" name="Zatrix Repository">
-    <dir>
-            <info compressed="false">https://raw.github.com/Angel312/pg1zatrix/master/addons.xml</info>
-            <checksum>https://raw.github.com/Angel312/pg1zatrix/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.github.com/Angel312/pg1zatrix/master/</datadir>
-    </dir>
-    <dir>
-            <info compressed="false">https://raw.github.com/Angel312/pg1zatrix_common/master/addons.xml</info>
-            <checksum>https://raw.github.com/Angel312/pg1zatrix_common/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.github.com/Angel312/pg1zatrix_common/master/</datadir>
-    </dir>
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.1" provider-name="Angel">
+	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
 		   <info compressed="false">http://2supremacy.uk/addons/addon.xml</info>
 		   <checksum>http://2supremacy.uk/addons/addons.xml.md5</checksum>
@@ -33,8 +23,8 @@
     </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Official Zatrix Project</summary>
-		<description lang="en">Download and install addons from Zatrix build</description>
+		<summary>Official Zatrix Project multi repo</summary>
+		<description lang="en">Download and install addons from difrom diffrent repos</description>
 		<platform>all</platform>
 	</extension>
 </addon>
