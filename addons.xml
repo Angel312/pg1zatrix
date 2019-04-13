@@ -948,7 +948,7 @@ http://www.hometheater.co.il</description>
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="0.2.6" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="0.2.7" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -976,6 +976,9 @@ http://www.hometheater.co.il</description>
 			<fanart>temp-fanart.png</fanart>
 		</assets>
 		<news>
+Changelog 0.2.7:
+Fixed filter function naming
+
 Changelog 0.2.6:
 Fixed Trakt Sync prompting if trakt not authorised
 
