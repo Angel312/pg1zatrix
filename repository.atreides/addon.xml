@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.atreides" name="Atreides Repository" version="0.0.4" provider-name="House Atreides">
+<addon id="repository.atreides" name="Atreides Repository" version="0.0.5" provider-name="House Atreides">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository" name="Atreides Repository">
-        <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipitydodah/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipitydodah/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_zipitydodah/</datadir>
+        <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/</datadir>
         <hashes>false</hashes>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
