@@ -948,7 +948,7 @@ http://www.hometheater.co.il</description>
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="0.2.22" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="0.2.24" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -976,6 +976,14 @@ http://www.hometheater.co.il</description>
 			<fanart>temp-fanart.png</fanart>
 		</assets>
 		<news>
+Changelog 0.2.24:
+Fixed issue with None value for seren_version entry of trakt database
+
+Changelog 0.2.23:
+Added workaround to combat file extraction error while obtaining GMT timezone information
+Fixed issue with activities failing due to no progress dialog raised
+Re-added extended information argument to the list items call to fix issue with first
+
 Changelog 0.2.22:
 Re-added ability for next-up to be sorted by Recently Played
 Added error message when attempting to play an item with no debrid accounts setup
@@ -1387,30 +1395,6 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
     <disclaimer lang="en">There can only be one.</disclaimer>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.tvone11" name="tvOne11" version="13" provider-name="RACC">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">tvOne</summary>
-    <description lang="en_gb">tvOne</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
   </extension>
 </addon>
 
