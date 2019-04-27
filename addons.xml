@@ -1319,7 +1319,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
   </extension>
 </addon>
 
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.3" provider-name="Bugatsinho">
+<addon id="plugin.video.sport365.live" name="Sport365" version="2.5.3A" provider-name="Bugatsinho">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests" version="2.19.1"/>
