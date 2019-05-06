@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.13clowns" version="2.0.21" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
+<addon id="plugin.video.13clowns" version="5.0.13" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
@@ -333,7 +333,7 @@
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
         <import addon="script.module.metahandler" />
-        <import addon="script.module.civitasscrapers" />
+        <import addon="plugin.video.youtube"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="clowns.py">
         <provides>video</provides>
@@ -1742,6 +1742,34 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
 	</extension>
 </addon>
 
+<addon id="repository.supremacy" name="[COLORaqua]supremacy[/COLOR]" version="3.0" provider-name="supremacy">
+	<extension point="xbmc.addon.repository" name="[COLORaqua]supremacy[/COLOR]">
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+	</dir>
+	<dir>
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
+		<info compressed="false">http://2supremacy.uk/addons/addon.xml</info>
+		<checksum>http://2supremacy.uk/addons/addons.xml.md5</checksum>
+		<datadir zip="true">http://2supremacy.uk/addons/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>video addon for supremacy</summary>
+		<description>Latest Addon Updates For Supremacy Repository</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="repository.ukturk" name="UKTurk Addon Repository" version="1.0.8" provider-name="UKTurk">
     <extension point="xbmc.addon.repository" name="UKTurk Addon Repository">
     <dir>
@@ -2006,14 +2034,13 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
     </extension>
 </addon>
 
-<addon id="script.module.13clowns" version="5.0.13" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
+<addon id="script.module.13clowns" version="5.0.24" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
     <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.beautifulsoup4"/>
-        <import addon="script.module.simplejson"/>
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.dateutil" />
+        <import addon="script.module.futures" />
+        <import addon="script.module.requests" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">

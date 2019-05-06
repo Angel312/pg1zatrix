@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.13clowns" version="2.0.21" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
+<addon id="plugin.video.13clowns" version="5.0.13" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
@@ -8,7 +8,7 @@
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
         <import addon="script.module.metahandler" />
-        <import addon="script.module.civitasscrapers" />
+        <import addon="plugin.video.youtube"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="clowns.py">
         <provides>video</provides>
