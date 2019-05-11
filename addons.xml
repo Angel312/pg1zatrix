@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.13clowns" version="5.0.13" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
+<addon id="plugin.video.13clowns" version="5.0.14" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="nobody">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
@@ -641,7 +641,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.13" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.14" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -2034,7 +2034,7 @@ Custom Provider module now uses Zfile module to accomodate zipfile module bug on
     </extension>
 </addon>
 
-<addon id="script.module.13clowns" version="5.0.24" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
+<addon id="script.module.13clowns" version="5.0.25" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.beautifulsoup4" />
