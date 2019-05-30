@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.13clowns" version="5.0.17" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="Mr. Clownman">
+<addon id="plugin.video.13clowns" version="5.0.19a" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="Mr. Clownman">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
