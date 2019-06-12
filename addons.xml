@@ -324,7 +324,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.13clowns" version="5.0.19a" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="Mr. Clownman">
+<addon id="plugin.video.13clowns" version="5.0.25a" name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" provider-name="Mr. Clownman">
    <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.13clowns" />
@@ -1071,7 +1071,7 @@ Speed Increase for playlist building
   </extension>
 </addon>
 
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.6.0" provider-name="Bugatsinho">
+<addon id="plugin.video.sport365.live" name="Sport365" version="2.6.1" provider-name="Bugatsinho">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests" version="2.3.0"/>
@@ -1095,10 +1095,8 @@ Speed Increase for playlist building
     <icon>icon.png</icon>
     <fanart>fanart.png</fanart>
   </assets>
-  <news>2.6.0 17-05-2019
-- Add as default playback method Streamlink thanks to Twilight and Devilsport
-- Add News-Updates on menu
-- Show version and by click it you force update addons!</news>
+  <news>2.6.1 07-06-2019
+- Fix links resolver</news>
   </extension>
 </addon>
 
@@ -1789,7 +1787,7 @@ Speed Increase for playlist building
     </extension>
 </addon>
 
-<addon id="script.module.13clowns" version="5.0.34a" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
+<addon id="script.module.13clowns" version="5.0.40a" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.beautifulsoup4" />
