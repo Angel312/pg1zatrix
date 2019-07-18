@@ -772,7 +772,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.15A" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.16" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1403,6 +1403,57 @@ Fixed CM options not showing if context menu addon not installed
 
 </addon>
 
+<addon id="plugin.video.venom" version="3.0.6" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.requests" version="2.19.1" />
+		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="plugin.video.youtube" version="6.2.0"/>
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.openscrapers" />
+		<import addon="script.module.addon.signals" version="0.0.1"/>
+	</requires>
+
+	<extension point="xbmc.python.pluginsource" library="venom.py">
+		<provides>video</provides>
+	</extension>
+
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/lib/"/>
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">[B][COLOR red]Venom[/COLOR][/B] We do not host any of the contents streamed</summary>
+		<description lang="en">[B]Venom[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot01a.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot02a.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot03a.jpg</screenshot>
+		</assets>
+		<news>
+[B][COLOR red]Update - v3.0.6 - July 17, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed resume playback from widget.[/I]
+COLOR yellow]--[/COLOR][I] Colorized labels for a number of settings
+    page color choices so you can now see how it will
+    look before making color choice.[/I]
+[COLOR yellow]--[/COLOR][I] Updated Network TV Shows to work with settings page
+    option "Disable Extended artwork".[/I]
+[COLOR yellow]--[/COLOR][I] Added landscape fallback artwork when using "Disable
+    Extended artwork".[/I]
+		</news>
+	</extension>
+
+</addon>
+
 <addon id="plugin.video.watchnixtoons" name="WatchNixtoons" version="1.0.2" provider-name="Nixgates">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1559,7 +1610,7 @@ Fixed CM options not showing if context menu addon not installed
 	</extension>
 </addon>
 
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.2" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.3" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -1567,10 +1618,20 @@ Fixed CM options not showing if context menu addon not installed
             <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
     </dir>
     <dir>
-            <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/</datadir>
+			<info compressed="false">http://worldkodi.com/Repo/addons.xml</info>
+			<checksum>http://worldkodi.com/Repo/addons.xml.md5</checksum>
+			<datadir zip="true">http://worldkodi.com/Repo/</datadir>
     </dir>
+    <dir>
+			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/</datadir>
+	</dir>
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
@@ -1941,49 +2002,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
         <license>Beerware rev. 42</license>
         <reuselanguageinvoker>false</reuselanguageinvoker>
     </extension>
-</addon>
-
-<addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.5.13" provider-name="CivitasAdmin">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.beautifulsoup4"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
-        <provides>executable</provides>
-    </extension>
-        <extension point="xbmc.addon.metadata">
-            <platform>all</platform>
-            <summary lang="en">Civitas Scrapers Module</summary>
-            <description>Scrape common video host for URL's to be playable in XBMC/Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart></fanart>
-    </assets>
-    <news></news>
-    </extension>
-</addon>
-
-<addon id="script.module.lambdascrapers" name="Lambdascrapers Module" version="1.8.2.7" provider-name="13Clowns">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.beautifulsoup4"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.service" library="CleanupService.py" start="startup" />
-        <extension point="xbmc.addon.metadata">
-            <platform>all</platform>
-            <summary lang="en">Lambdascrapers Module</summary>
-            <description>Scrape common video host for URL's to be playable in XBMC/Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-                <license>Beerware rev. 42</license>
-        </extension>
 </addon>
 
 <addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.1.4.a" provider-name="Team Universal">
