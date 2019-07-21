@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.3" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.5" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -11,6 +11,10 @@
 			<checksum>http://worldkodi.com/Repo/addons.xml.md5</checksum>
 			<datadir zip="true">http://worldkodi.com/Repo/</datadir>
     </dir>
+		    <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
+	        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml.md5</checksum>
+	        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/</datadir>
+	        <hashes>false</hashes>
     <dir>
 			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
