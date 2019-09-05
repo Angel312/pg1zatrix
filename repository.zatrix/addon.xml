@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.zatrix" name="Zatrix Repo" version="1.0.8" provider-name="Angel">
+<addon id="repository.zatrix" name="Zatrix Repo" version="1.0.9" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Zatrix Repository">
     <dir>
             <info compressed="false">https://raw.github.com/Angel312/pg1zatrix/master/addons.xml</info>
@@ -31,11 +31,6 @@
             <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
-    <dir>
-		<info compressed="false">http://2supremacy.uk/addons/addon.xml</info>
-		<checksum>http://2supremacy.uk/addons/addons.xml.md5</checksum>
-		<datadir zip="true">http://2supremacy.uk/addons/</datadir>
-	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Official Zatrix Project</summary>
