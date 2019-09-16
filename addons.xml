@@ -891,17 +891,16 @@ http://www.hometheater.co.il</description>
 </addon>
 
 <addon  id="plugin.video.retrospect"
-        version="5.0.0.0~beta2"
+        version="5.0.5"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
-        <import addon="xbmc.metadata" version="2.1.0" />
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.requests" version="2.18.0" />
         <import addon="inputstream.adaptive" version="2.0.19" />
         <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
-        <import addon="script.module.inputstreamhelper" version="0.3.3" />
+        <import addon="script.module.inputstreamhelper" version="0.3.5" />
     </requires>
 
     <extension  point="xbmc.python.pluginsource"
@@ -1009,17 +1008,39 @@ http://www.hometheater.co.il</description>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <platform>all</platform>
-        <summary lang="en_GB">Retrospect (previously XBMC Online TV) is a plugin that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
-        <description lang="en_GB">Retrospect uses the official websites of a lot of different broadcasting companies (mainly Dutch, Belgian, British and Swedish) to make their re-run episodes available on the Kodi platform. More information can be found at www.rieter.net.[CR][CR]Retrospect reports back usage statistics to our servers. This option can be disabled from the add-on settings.</description>
-        <disclaimer lang="en_GB">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage caused to your system. Nor do we take responsibility for the content that can be watched via this add-on or any consequences of using this add-on to watch the content using the content provider's platforms.</disclaimer>
-        <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v5.0.0.0~beta2 - Changelog - 2019-07-14[/B]
 
-A new beta version that fixes some channel problems and some Kodi repository compliancy.
+        <summary lang="en_GB">Retrospect enables playback of re-runs/catch-ups of TV shows available online.</summary>
+        <description lang="en_GB">Retrospect uses the official websites and freely available streams of different broadcasting companies (mainly Dutch, Belgian, British, Norwegian and Swedish) to make their re-run/catch-up episodes available on the Kodi platform.[CR][CR]More information can be found at https://rieter.net or the Retrospect wiki at https://github.com/retrospect-addon/plugin.video.retrospect/wiki/.</description>
+        <disclaimer lang="en_GB">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage caused to your system. Nor do we take responsibility for the content that can be watched using this add-on or any consequences of using this add-on to watch content via the content providers' platforms.</disclaimer>
+
+        <summary lang="sv_SE">Retrospect mÃ¶jliggÃ¶r att visa playkanaler.</summary>
+        <description lang="sv_SE">Retrospect anvÃ¤nder olika TV-kanalers (framfÃ¶rallt nederlÃ¤ndska, belgiska, brittiska, norska och svenska) officiella webbsidor och fritt tillgÃ¤ngliga strÃ¶mmar fÃ¶r att gÃ¶ra deras playkanaler tillgÃ¤ngliga i Kodi.[CR][CR]Mer information finns pÃ¥ https://rieter.net eller Retrospects wiki pÃ¥ https://github.com/retrospect-addon/plugin.video.retrospect/wiki/.</description>
+        <disclaimer lang="sv_SE">Retrospect tillgÃ¤ngliggÃ¶rs i befintligt skick. Vi tar inget som helst ansvar fÃ¶r mÃ¶jliga (men hÃ¶gst osannolika) skador pÃ¥ ditt system. Vi tar inte heller ansvar fÃ¶r innehÃ¥llet som kan ses med detta tillÃ¤gg eller konsekvenser av att anvÃ¤nda tillÃ¤gget fÃ¶r att se innehÃ¥llet via innehÃ¥llsleverantÃ¶rernas plattformar.</disclaimer>
+
+        <license>CC-BY-NC-SA-4.0</license>
+        <language>en nl de se no lt lv fi</language>
+        <news>[B]Retrospect v5.0.5 - Changelog - 2019-09-10[/B]
+
+Another small update to fix some channel related issues and update some translations.
+
+[B]Framework related[/B]
+* Fixed: don&#x27;t set weird dates, as they are shown in Kodi 18.4 and higher
+
+[B]GUI/Settings/Language related[/B]
+-
+
+[B]Channel related[/B]
+* Fixed: Swedish TV4, Sjuan and TV12 did not show subtitles (Fixes #1188)
+* Fixed: VRT.nu did not parse folders (Fixes #1218)
+* Fixed: listing of SVT shows did not work (Fixes #1217)
+* Fixed: invalid expire dates for OA items in SVT Play and set Geo protected warning (Fixes #1220)
         </news>
         <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <screenshot>resources/media/retrospect01.jpg</screenshot>
+            <screenshot>resources/media/retrospect02.jpg</screenshot>
+            <screenshot>resources/media/retrospect03.jpg</screenshot>
         </assets>
     </extension>
 </addon>
@@ -1928,7 +1949,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
     </extension>
 </addon>
 
-<addon id="script.module.13clowns" version="5.0.41" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
+<addon id="script.module.13clowns" version="5.0.42" name="[B][COLOR red]13Clowns[/COLOR] Script.Module[/B]" provider-name="nobody">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.beautifulsoup4" />
@@ -1997,7 +2018,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
         </extension>
 </addon>
 
-<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.1.4" provider-name="S">
+<addon id="script.module.yoda" name="[COLORgreen]yoda Module[/COLOR]" version="2.1.5" provider-name="S">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>
