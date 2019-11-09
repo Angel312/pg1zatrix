@@ -772,7 +772,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.17" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.18" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
