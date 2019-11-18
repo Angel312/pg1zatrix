@@ -1879,7 +1879,7 @@ Fixed CM options not showing if context menu addon not installed
     </extension>
 </addon>
 
-<addon id="script.afkboxtools2" name="Update Tools AFK 2/Lite/Limited" version="2.1.20" provider-name="AFK">
+<addon id="script.afkboxtools2" name="Update Tools AFK 2/Lite/Limited" version="2.1.22" provider-name="AFK">
   <requires>
     	<import addon="xbmc.python" version="2.1.0"/>
   </requires>
