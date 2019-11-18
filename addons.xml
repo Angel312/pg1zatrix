@@ -356,9 +356,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.45" provider-name="ANNE">
+<addon id="plugin.video.afkmenu" name="Zatrix Menu 1" version="1.0.50" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="repository.multirepoafk2"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>executable</provides>
@@ -1648,6 +1649,51 @@ Fixed CM options not showing if context menu addon not installed
             <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Official Zatrix Project multi repo</summary>
+		<description lang="en">Download and install addons from difrom diffrent repos</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+    <addon id="repository.multirepoafk2" name="Multi Repo AFK-Box 2" version="4.0.8" provider-name="Angel">
+	<extension point="xbmc.addon.repository" name="Multi Repository">
+    <dir>
+            <info compressed="false">http://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>http://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+			<info compressed="false">http://magnetic.website/__zips/addons.xml</info>
+            <checksum>http://magnetic.website/__zips/addons.xml.md5</checksum>
+            <datadir zip="true">http://magnetic.website/__zips/</datadir>
+    </dir>
+    <dir>
+			<info compressed="false">http://bitbucket.org/threw/the-crew/raw/master/_zips/addons.xml</info>
+			<checksum>http://bitbucket.org/threw/the-crew/raw/master/_zips/addons.xml.md5</checksum>
+			<datadir zip="true">http://bitbucket.org/threw/the-crew/raw/master/_zips/</datadir>
+    </dir>
+    <dir>
+			<info compressed="false">http://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+			<checksum>http://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">http://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/addons.xml</info>
+			<checksum>http://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">http://raw.githubusercontent.com/a4k-openproject/repository.openmeta/master/zips/</datadir>
+	</dir>
+    <dir>
+            <info compressed="false">http://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+            <checksum>http://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
+    <dir>
+            <info compressed="false">http://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>http://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
     </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
