@@ -1608,7 +1608,7 @@ Fixed CM options not showing if context menu addon not installed
 	</extension>
 </addon>
 
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.8" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.9" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -1621,9 +1621,9 @@ Fixed CM options not showing if context menu addon not installed
             <datadir zip="true">https://magnetic.website/__zips/</datadir>
     </dir>
     <dir>
-			<info compressed="false">https://bitbucket.org/threw/the-crew/raw/master/_zips/addons.xml</info>
-			<checksum>https://bitbucket.org/threw/the-crew/raw/master/_zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://bitbucket.org/threw/the-crew/raw/master/_zips/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/_zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/_zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/_zips</datadir>
     </dir>
     <dir>
 		    <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
