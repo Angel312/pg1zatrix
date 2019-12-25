@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.9" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.10" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -12,9 +12,9 @@
             <datadir zip="true">https://magnetic.website/__zips/</datadir>
     </dir>
     <dir>
-			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/_zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/_zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/_zips</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/</datadir>
     </dir>
     <dir>
 		    <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
