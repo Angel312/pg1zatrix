@@ -791,7 +791,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.18A" provider-name="ANNE">
+<addon id="plugin.video.menu" name="Zatrix Menu" version="2.0.19" provider-name="ANNE">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -1626,7 +1626,7 @@ Fixed CM options not showing if context menu addon not installed
 	</extension>
 </addon>
 
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.10" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.11" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -1639,14 +1639,20 @@ Fixed CM options not showing if context menu addon not installed
             <datadir zip="true">https://magnetic.website/__zips/</datadir>
     </dir>
     <dir>
-            <info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip</datadir>
     </dir>
     <dir>
 		    <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
 	        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml.md5</checksum>
 	        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/</datadir>
+    </dir>
+    <dir>
+            <info compressed="false">http://luxurywizard.space/_repo/addons.xml</info>
+            <checksum>http://luxurywizard.space/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://luxurywizard.space/_repo/</datadir>
+            <hashes>false</hashes>
     </dir>
     <dir>
 			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
