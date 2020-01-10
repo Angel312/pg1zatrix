@@ -1064,15 +1064,15 @@ Fixed some Swedish channel related issues and a Python 3 issue for HTTP response
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="1.0.24" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="1.6.4" name="Seren" provider-name="Nixgates">
 	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.requests" version="2.19.1" />
 		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
-		<import addon="script.module.metahandler" version="1.0.0" />
 		<import addon="plugin.video.youtube" version="6.2.0"/>
 		<import addon="script.module.addon.signals" version="0.0.1"/>
 		<import addon="script.module.dateutil" version="2.7.3"/>
+        <import addon="context.seren" version="1.0.3"/>
 <!--		<import addon="script.module.inputstreamhelper" version="0.3.3"/> #### Not yet big boy ####-->
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="seren.py">
@@ -1080,182 +1080,98 @@ Fixed some Swedish channel related issues and a Python 3 issue for HTTP response
 	</extension>
 	<extension point="xbmc.service" library="service.py" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Seren - This Addon is currently in beta. Please be aware there may be bugs present</summary>
-		<description lang="en">
+		<reuselanguageinvoker>false</reuselanguageinvoker> <!-- You can enable this if you want, expect some instability but much faster menu speeds -->
+		<summary lang="en">Seren - Modular Multi-source Addon</summary>
+		<description lang="en"> Seren is a modular provider based, cloud service streaming software that is tightly interwoven with Trakt. Seren provides the freedom to view media from a single menu system from service providers of the users choosing. Please Note: This addon requires the use of a compatible cloud service.
 		</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author of this addon takes no responsibility for any 3rd party intergration or modification of this software, please ensure your use of this software abides by your local and insterstate laws.</disclaimer>
+		<website>https://github.com/nixgates/plugin.video.seren</website>
+		<source>https://github.com/nixgates/plugin.video.seren</source>
+		<disclaimer lang="en">
+			Last updated: September 09, 2019.
+			The information contained within the Seren software (the "Service") is for general information purposes only.
+			The author assumes no responsibility for errors, omissions in the contents on the Service, nor does it assume responsibility for any material provided by any external services.
+			The use of the Service does not authorise the user to engage in any kind of illegal, criminal or tortious activity through the use of the software, including infringement of any third party intellectual property rights (including without limitation copyright, trade marks, patent, trade secrets and confidential information), fraud, child pornography, trafficking in obscene material, violation of applicable export restrictions, drug dealing, gambling, harassment, stalking, spamming, hacking, sending of viruses or other harmful files or illegal posting of computer passwords or computer code.
+			The user is responsible for all their activity in connection with the use of the Service and the author reserves the right to report any potentially criminal activity to appropriate law enforcement agencies.
+			The user must not transmit to or via the Service, any material that may infringe the intellectual property rights of any third party, or any defamatory, derogatory or offensive material or publication.
+			In no event shall the author of this software be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service.
+			The author reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice.
+			The author of this software does not warrant that the software is free of viruses or other harmful components.
+			Seren may contain links to external websites that are not provided or maintained by or in any way affiliated with the author.
+			Please note that the author does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.
+		</disclaimer>
 		<assets>
 			<icon>ico-fox-gold-final.png</icon>
 			<fanart>fanart-fox-gold-final.png</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
-Changelog 1.0.24:
-Fix Automatic Episode Resume
+Changelog 1.6.4:
+Trakt requests now automatically re-try in the event of remote server failures
+Fixed issue with some movies not being marked as collected during sync
+Catch stringed NoneType values in database.py
+Resolver now returns None if cancelled, regardless if resolving was successful
+File size limits are now enabled by default (10GB)
+Fixed settings cleanup method (missmatch settings error)
+Fixed MyFiles for All Debrid
+Seperated cloud services within MyFiles
 
-Changelog 1.0.23:
-Fixed disable/enabled of providers
-Clean up some missed logging
+Changelog 1.6.3:
+Fixed backwards compatibility for older Seren list urls
+Movie titles now confirm against IMDB before scrape
+Stop triggering Oauth refresh on 401 errors
+Next up sort style now requires Trakt Auth
+All Debrid magnets are now removed from account after resolving is complete
+Fixed source size possibly displaying multiple times in resolver window
+Rescrape now only applies to initial playlist item
+Fixed ability to backout of Hide Item selection in Trakt manager
+Fixed Trakt lists with same name being mixed up
+Trakt list titles now also append the username
 
-Changelog 1.0.22:
-Fixed Background Scraping Display style
+Changelog 1.6.2:
+Fixed trakt database rebuild issues
 
-Changelog 1.0.21:
-Fixed issue with Custom Providers refresh not honoring disabled status (Actually this time)
-Added try/except for property/progress updates in getSources module
-Fixed issue with source dicts being stringed during source select
-Added onClick callback for source select
+Changelog 1.6.1:
+Fix playback for RD items in My Files
+Fix Trakt Sync Databsae not upgrading correctly
+Fixed Trakt lists missing items
+Settings dialog now closes during PM auth
+Fixed double database rebuilding
+Fixed AllDebrid movie resolving
+Fix list comprehension error in check_for_updates method in skin_manager module
 
-Changelog 1.0.20:
-Fixed Source Select selecting wrong source
-Fixed issue with Custom Providers refresh not honoring disabled status
-
-Changelog 1.0.19:
-Further adjustments of background overlay to better suit brighter fanart images
-
-Changelog 1.0.18:
-Added Overlay to custom windows
-Added re-worked versions of artwork
-Seren Fanart now applies to all items that are missing fanart
-
-Changelog 1.0.17:
-Adjust poster size in Source Select
-Added setting "Auto try next link on resolve failure (Source Select)"
-
-Changelog 1.0.16:
-Cleaned up and re-worked provider database sync function
-Fixed issue with providers not showing on initial install of providers
-
-Changelog 1.0.15:
-Local torrent database restructued to increase speeds and handling of entries
-Increased visibility of selected item in source select view
-Fixed hosters providers not scraping episodes
-Hosters now display the release title of the source if available
-Re-work of Seren artwork
-
-Changelog 1.0.14:
-Fixed Shuffle Play
-Adjusted contrast levels for new windows
-
-Changelog 1.0.13:
-All custom windows have been migrated over to XML based windows
-Tidied code within getSources endpoint
-Failure to resolve an item with source select active now returns the user to the source select window
-Improvements to trakt bookmarks occuring
-Added notification at RD auth to check if users account is premium and advise accordingly
-Adjusted Premiumize Automatic Cloud Removal to support new Fair Usage system
-Premiumize percentage threshold is now maximum GBs of used storage
-Fixed appending seasons to current playlist
-
-Changelog 1.0.12:
-Fixed issues with show year returning INT
-
-Changelog 1.0.11:
-Fixed removal of hidden items during sync
-
-Changelog 1.0.10:
-Fixed Hiding show from episode items
-
-Changelog 1.0.9:
-Fixed Date Display issue with Up Next notification
-Menu caching is now optional within Seren settings, defaulted to On
-Show year meta information now gathered from Trakt instead of TVDB (meta missing on some titles)
-Changes to search menu to provide better usability
-Increasesd title identification
-
-Changelog 1.0.8:
-Improvements to title identification
-Improvements to window handling on playback failure/cancellation
-Disabled Kodi menu caching for all directories
-Moved playback resume execution closer to start of playback
-Fixed IMDB meta confirmation for movies
-
-Changelog 1.0.7:
-Adjusted Trakt Manager method to better suit new URLS
-Fixed Smartplay playlist builder not honoring hide un-aired setting
-Further improvements to show pack filter
-
-Changelog 1.0.6:
-Change movie items action to the correct action
-Changing trakt account now raises an initial sync process.
-Removing trakt account removes all watched status and collected status from local database
-Authorising trakt for the first time raises an initial sync process to occur
-Added trakt_username column to the Trakt Sync activities database
-Added migration for existing trakt users
-Unsuccesful attempts to mark/unmark watched status on items is now notified and logged
-Fixed issue with pre-emptive scraping failing when set to background task style scraping
-TV module functions now use a shared instance of the Trakt Sync database class
-Movie modules functions now use a shared instance of the Trakt Sync database class
-
-Changelog 1.0.5:
-Rollback changes to initial playlist creation due to issues with skin widgets
-
-Changelog 1.0.4:
-Added workaround for getSources api call
-Fixed more URL issues in seren.py breaking play style
-
-Changelog 1.0.3:
-Fixed issue cloud scraping for movie items caused by URL changes
-Fixed Source Select List (Movies) issues due to URL changes
-Fixed issues caused in player module from URL change
-Fixed issues caused in smartPlay from URL change
-
-Changelog 1.0.2:
-Fixed issue with Trakt Sync Database repeatedly downgrading/upgrading
-
-Changelog 1.0.1:
-Fix slow trakt sync speeds caused by maximum SQL statements variable not resetting
-Fix issues with list style source select and URL changes
-Fixed date display in list style source select window
-
-Changelog 1.0.0:
-Removed Building Playlist process, seren now moves straight to scraping and fills in the playlist in the background
-Re-worked smartplay module
-Moving forward, Seren's versioning should now match semantic versioning
-Complete restructure of actionArgs for Seren API endpoints
-Fixed issues with trakt manager when in a mixed episode list
-Fixed Trakt Sync failing with exceptionally large libraries
-
-Changelog 0.2.38:
-Fixed issue with marking items as watched locally
-
-Changelog 0.2.37:
-Fixed Episode File Size setting visibility
-Fixed getSources module displaying checking local database when setting is disabled
-Removed logging of some superficial errors in Trakt Sync and Next Up menu
-Reduced minimum of percentage watched before marked as watched locally
-Fixed issue where seasons would not display for shows with odd season number conventions
-
-Changelog 0.2.36:
-Fixed visibility of Premiumize Account Settings
-Provider update check timeout increased to hourly
-Addon update checks timeout increased to daily
-Drastic increases to trakt sync speeds
-Added fallbacks for possible network failures in trakt syncing process
-Fixed default tuple length in getSources
-Fixed Real-Debrid Cloud Sources breaking due to missing size key
-Disabled cache assist when cloud files are present during scrape process
-Adjusted scrobble check for player module to occur only when successfully scrobbled to trakt
-Added fallback for trakt scrobbling to playbackended player callback
-Removed duplicate trakt prompt on auth failure
-Un-cached Sources in manual cache assist are now sorted by seeds descending
-Added Browse Season option to episode context menu
-Added ability to shuffle play show from an episode item
-Fixed setting retrieval for Apple devices
-Movies and episodes now have seperate file size limits
-Source select view now defaults to list
-Fixed delayed playback failed dialog from Kodi
-Fixed issue with appending next season to active playlist
-Escaped ampersand characters in settings file
-Fixed issue where item meta information would not update unless a Trakt account was authorised
-Disabled caching of results if no sources are found
-Fixed missing settings check for Local Torrent Cache inspection.
-Fixed CM options not showing if context menu addon not installed
-
+Changelog 1.6.0:
+Some Greek translations added
+Some German translations added
+Next Up menu now generated completely locally using DB query
+Added All-Debrid Support
+Premiumize now uses O-Auth (re-auth is required)
+Complete re-work of the standard playlist building (removes building playlist window for standard playback)
+Re-work of My Files module to reduce spaghetti
+Re-work of resolver module to reduce spaghetti
+New Custom Windows Still Watching/Play Next
+Added update support for Seren Themes
+Removed support for UpNext addon
+Lists are now synced to the trakt database
+More work on player.py module, better bookmark identification and playback marking
+Re-work Trakt Manager to be more context sensitive
+Added ability to paginate Trakt lists
+Added some more shortcuts to the search menu
+Show information is confirmed with IMDB prior to scrape
+Date and time in custom windows now displays in regional format
+Added fallbacks for shows meta gathering in Trakt DB
+Source filtering improvements to reduce meta loss
+Set a timeout for Fanart.tv calls (reduces slow downs at cost of artwork)
+Re-worked intial trakt sync and removed dialog box
+Complete overhaul of the bookmark system
+Fixed torrent semaphore not being released
+Playback parameters are now applied to further episodes
+Implement new listall endpoint for Premiumize cloud scraping (decreased scrape times)
+More minor bugfixes (honestly could not list them all)
 		</news>
 	</extension>
 </addon>
