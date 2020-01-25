@@ -1036,20 +1036,21 @@ http://www.hometheater.co.il</description>
 </addon>
 
 <addon  id="plugin.video.retrospect"
-        version="5.0.8"
+        version="5.1.6"
         name="Retrospect"
         provider-name="Bas Rieter">
 
     <requires>
         <import addon="xbmc.python" version="2.25.0" />
         <import addon="script.module.requests" version="2.18.0" />
+        <import addon="script.module.pytz" version="2014.2" />
         <import addon="inputstream.adaptive" version="2.0.19" />
         <import addon="plugin.video.youtube" version="6.0.0" optional="true" />
         <import addon="script.module.inputstreamhelper" version="0.3.5" />
     </requires>
 
     <extension  point="xbmc.python.pluginsource"
-                library="default.py">
+                library="retroaddon.py">
         <provides>video</provides>
     </extension>
 
@@ -1058,22 +1059,22 @@ http://www.hometheater.co.il</description>
 
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
-            <item library="resources\menus\menu_queue.py">
+            <item library="menu_queue.py">
                 <label>30541</label>
                 <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)</visible>
             </item>
 
-            <item library="resources\menus\menu_hide_channel.py">
+            <item library="menu_hide_channel.py">
                 <label>30574</label>
                 <visible>ListItem.Property(RetrospectChannel)</visible>
             </item>
 
-            <item library="resources\menus\menu_cloak.py">
+            <item library="menu_cloak.py">
                 <label>30563</label>
                 <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectCloaked)+!ListItem.Property(RetrospectFavorite)</visible>
             </item>
 
-            <item library="resources\menus\menu_uncloak.py">
+            <item library="menu_uncloak.py">
                 <label>30564</label>
                 <visible>ListItem.Property(RetrospectCloaked)</visible>
             </item>
@@ -1082,17 +1083,17 @@ http://www.hometheater.co.il</description>
             <menu>
                 <label>30580</label>
 
-                <item library="resources\menus\menu_bitrate.py">
+                <item library="menu_bitrate.py">
                     <label>30577</label>
                     <visible>ListItem.Property(Retrospect)+!ListItem.Property(RetrospectCategory)+!ListItem.Property(RetrospectFavorite)</visible>
                 </item>
 
-                <item library="resources\menus\menu_adaptive.py">
+                <item library="menu_adaptive.py">
                     <label>30579</label>
                     <visible>ListItem.Property(RetrospectAdaptive)+System.HasAddon(inputstream.adaptive)</visible>
                 </item>
 
-                <item library="resources\menus\menu_channelsettings.py">
+                <item library="menu_channelsettings.py">
                     <label>30069</label>
                     <visible>ListItem.Property(RetrospectChannelSettings)+!ListItem.Property(RetrospectCategory)</visible>
                 </item>
@@ -1102,22 +1103,22 @@ http://www.hometheater.co.il</description>
             <menu>
                 <label>30575</label>
 
-                <item library="resources\menus\menu_channel_favs.py">
+                <item library="menu_channel_favs.py">
                     <label>30503</label>
                     <visible>ListItem.Property(RetrospectVideo)|ListItem.Property(RetrospectFolder)|ListItem.Property(RetrospectChannel)</visible>
                 </item>
 
-                <item library="resources\menus\menu_all_favs.py">
+                <item library="menu_all_favs.py">
                     <label>30500</label>
                     <visible>ListItem.Property(RetrospectChannel)</visible>
                 </item>
 
-                <item library="resources\menus\menu_add_fav.py">
+                <item library="menu_add_fav.py">
                     <label>30504</label>
                     <visible>ListItem.Property(RetrospectFolder)+!ListItem.Property(RetrospectFavorite)</visible>
                 </item>
 
-                <item library="resources\menus\menu_remove_fav.py">
+                <item library="menu_remove_fav.py">
                     <label>30506</label>
                     <visible>ListItem.Property(RetrospectFavorite)</visible>
                 </item>
@@ -1127,22 +1128,22 @@ http://www.hometheater.co.il</description>
             <menu>
                 <label>30572</label>
 
-                <item library="resources\menus\menu_channel_selection.py">
+                <item library="menu_channel_selection.py">
                     <label>30507</label>
                     <visible>ListItem.Property(RetrospectChannel)</visible>
                 </item>
 
-                <item library="resources\menus\menu_country_selection.py">
+                <item library="menu_country_selection.py">
                     <label>30576</label>
                     <visible>ListItem.Property(RetrospectChannel)</visible>
                 </item>
 
-                <item library="resources\menus\menu_settings.py">
+                <item library="menu_settings.py">
                     <label>30528</label>
                     <visible>ListItem.Property(Retrospect)</visible>
                 </item>
 
-                <!--item library="resources\menus\menu_install_widevine.py">
+                <!--item library="menu_install_widevine.py">
                     <label>30532</label>
                     <visible>ListItem.Property(Retrospect)+System.HasAddon(inputstream.adaptive)+System.HasAddon(script.module.inputstreamhelper)</visible>
                 </item-->
@@ -1164,21 +1165,18 @@ http://www.hometheater.co.il</description>
 
         <license>CC-BY-NC-SA-4.0</license>
         <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v5.0.8 - Changelog - 2019-10-19[/B]
+        <news>[B]Retrospect v5.1.6 - Changelog - 2020-01-23[/B]
 
-Fixed some Swedish channel related issues and a Python 3 issue for HTTP responses without encoding information.
+This update contains a fix for VRT.nu that broken again!
 
 [B]Framework related[/B]
-* Fixed: possible issue with missing content-type that cause a byte object to return (See #1239)
+-
 
 [B]GUI/Settings/Language related[/B]
 -
 
 [B]Channel related[/B]
-* Added: Expires at to SVT (Fixes #1213)
-* Fixed: UR Play site changes broke the channel (Fixes #1237)
-* Changed: Try to extract a duration from the description (Fixes #1238)
-* Fixed: TV4.se changed their API endpoint (Fixes #1240)
+* Fixed: VRT.nu updated some HTML pages again! (Fixes #1281)
         </news>
         <assets>
             <icon>resources/media/icon.png</icon>
