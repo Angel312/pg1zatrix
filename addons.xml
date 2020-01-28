@@ -1188,7 +1188,7 @@ This update contains a fix for VRT.nu that broken again!
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="1.6.7" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="1.6.8" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -1234,6 +1234,21 @@ This update contains a fix for VRT.nu that broken again!
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
+Changelog 1.6.8:
+Tighten and speed up PM cloud file inspection
+Multiple fixes to TMDb module
+buildSimpleTorrentInfo now more safe for shows that lack information
+Added compatibility for Trakt usernames with non ASCII characters
+Created new regex method for identifying files inside a pack
+Premiumize resolver now uses regex method
+Real Debrid resolver now uses regex method
+Reworked RD cache check method to use new new methods created
+Cleaned up Real Debrid resolver method
+Cleaned up Premiumize resolver method
+Genre lists now use the trending endpoint to provide more current/relevant titles
+Fix possible double resolving of source in source select if not using auto-try next source
+Fixed Play from random point not clearing playing items from playlist
+
 Changelog 1.6.7:
 Fix season sort due to stringed season number from TMDb module
 
@@ -1314,11 +1329,11 @@ More minor bugfixes (honestly could not list them all)
 	</extension>
 </addon>
 
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.6.9" provider-name="Bugatsinho">
+<addon id="plugin.video.sport365.live" name="Sport365" version="2.6.10.1" provider-name="Bugatsinho">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.requests" version="2.3.0"/>
-        <import addon="plugin.video.f4mTester" />
+        <import addon="script.module.requests" version="2.1.0"/>
+        <import addon="plugin.video.f4mTester" version="2.7.2"/>
         <import addon="script.module.streamlink.base" />
         <import addon="script.module.pyxbmct" version="1.2.0"/>
     </requires>
@@ -1338,8 +1353,8 @@ More minor bugfixes (honestly could not list them all)
     <icon>icon.png</icon>
     <fanart>fanart.png</fanart>
   </assets>
-  <news>2.6.9 09-12-2019
-- Fix GitHub URL on NEWS Tab</news>
+  <news>2.6.10 18-01-2020
+- Just fix regex issues.Streams could not play!</news>
   </extension>
 </addon>
 
