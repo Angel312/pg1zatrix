@@ -1188,16 +1188,13 @@ This update contains a fix for VRT.nu that broken again!
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="1.6.9" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="1.6.16" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.requests" version="2.19.1" />
 		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
 		<import addon="plugin.video.youtube" version="6.2.0"/>
-		<import addon="script.module.addon.signals" version="0.0.1"/>
 		<import addon="script.module.dateutil" version="2.7.3"/>
-        <import addon="context.seren" version="1.0.3"/>
-<!--		<import addon="script.module.inputstreamhelper" version="0.3.3"/> #### Not yet big boy ####-->
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="seren.py">
 		<provides>video</provides>
@@ -1234,6 +1231,37 @@ This update contains a fix for VRT.nu that broken again!
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
+Changelog 1.6.16:
+Fix response.status_code check for Trakt Auth
+
+Changelog 1.6.15:
+Adjsut status code responses for Trakt module
+
+Changelog 1.6.14:
+Remove cleaning of depricated settings as it was causing corrupt settings file
+
+Changelog 1.6.13:
+Add workaround on failure to grab user lists
+
+Changelog 1.6.12:
+Fix endpoint for still watching and playing next windows
+
+Changelog 1.6.11:
+Fix provider list not showing due to theme changes
+
+Changelog 1.6.10:
+Increased concurrent threads for Trakt Sync database to speed up large menu lists
+Fixed movie view by ID setting not displaying
+Fix TypeError when a manual update check is performed and no providers are installed.
+Added monkey patch of requests to allow cancellation of provider requests after we have exited getSources keepalive
+Added support to inform providers to shutdown
+Force lists to sync against trakts dates instead of local
+Fix marking watched on specials if no episodes are present
+Re-factored marking as watched for shows/seasons to speed up process
+Randomize service run time to avoid conflicting schedules
+More py3 compatibility fixes
+Zip file handling fixes due to issues with py3 compat
+Extended logging in RD resolving to allow better identification of issues
 
 Changelog 1.6.9:
 Fixed AllDebrid Cache check mistake during py3 compatibility changes
@@ -2293,16 +2321,15 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <addon id="service.subloader"
-    name="SubLoader" version="0.1.2" provider-name="DenimNani">
+    name="SubLoader" version="0.1.4" provider-name="DenimNani">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
   <extension point="xbmc.service" library="monitor.py" start="login"></extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Automatic subtitles on play</summary>
+    <summary lang="en">Automatic subtitles for your content</summary>
     <description lang="en">Auto download the best subtitle automatically as soon you start the video.
-Special thanks to OpenSubtitles.org for providing a great source of subtitles.
-The SubLoader uses some code from the great addon Autosubs, special thanks to Zeljko Ametovic and schumi2004.</description>
+Special thanks to OpenSubtitles.org for providing a unique UA for Subloader.</description>
     <platform>all</platform>
     <language>en</language>
     <license>GPL</license>
@@ -2316,7 +2343,23 @@ The SubLoader uses some code from the great addon Autosubs, special thanks to Ze
     <source>https://github.com/denimnani/service.subloader</source>
     <forum></forum>
     <email></email>
-	<news>0.1.2     17.06.2019
+	<news>0.1.4     23.07.2019
+Added Dutch language (Special thanks to Tinuz97).
+Clean up project files.
+
+0.1.3     21.07.2019
+Added OS user login.
+Fixed debug option.
+Added more debug information.
+Massive code rewrite.
+Several optimizations.
+Added audio language exclusions.
+Added video addon exclusions.
+Improved sorting settings.
+Improved settings layout.
+Added Do nothing option.
+
+0.1.2     17.06.2019
 Added a unique User Agent from Opensubtitles.org.
 
 0.1.1     12.06.2019
@@ -2331,11 +2374,7 @@ Added default behavior selection.
 Added auto donwload any subtitle if no match found.
 Updated settings xml.
 Updated strings po.
-Release type detection improved.
-
-0.0.9
-Release type detection improved.
-More clean up.</news>
+Release type detection improved.</news>
   </extension>
 </addon>
 

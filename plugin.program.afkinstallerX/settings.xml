@@ -1,0 +1,9 @@
+<settings version="2">
+    <setting id="hasran" default="true">true</setting>
+    <setting id="noteImage">462</setting>
+    <setting id="noteMessage"> [B]more working streams[/B]&#x0A;in your Kodi addons?&#x0A;&#x0A;The answer is: [B]you need a VPN[/B].&#x0A;&#x0A;Using a VPN will instantly give you&#x0A;the ability to [B]bypass site blocking[/B] and&#x0A;censorship.&#x0A;&#x0A;Subscribe through our [B]link below[/B] and&#x0A;you&apos;ll also be [B]supporting developers[/B]!&#x0A;&#x0A;[B][COLOR yellow]#1 VPN:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]</setting>
+    <setting id="noteType">t</setting>
+    <setting id="notifications-on-startup">false</setting>
+    <setting id="set_rtmp" default="true">true</setting>
+    <setting id="sevicehasran" default="true">true</setting>
+</settings>
