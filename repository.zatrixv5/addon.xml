@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.zatrixv5" name="Zatrix v5 Repo" version="1.0.1" provider-name="Angel">
+	<extension point="xbmc.addon.repository" name="Zatrix Repository">
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/Angel312/pg1zatrix/master/addons.xml</info>
+			<checksum>https://raw.github.com/Angel312/pg1zatrix/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Angel312/pg1zatrix/master/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/Angel312/pg1zatrix_common/master/addons.xml</info>
+			<checksum>https://raw.github.com/Angel312/pg1zatrix_common/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Angel312/pg1zatrix_common/master/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/Angel312/zatrix5/master/addons.xml</info>
+			<checksum>https://raw.github.com/iamAngel/zatrix/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Angel312/zatrix5/master/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+	</dir>
+	<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+	</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Official Zatrix Project</summary>
+		<description lang="en">Download and install addons from Zatrix build</description>
+		<platform>all</platform>
+	</extension>
+</addon>
