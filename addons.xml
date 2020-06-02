@@ -513,7 +513,7 @@ Added Trakt Manager
   </extension>
 </addon>
 
-<addon id="plugin.video.arrakis" name="Arrakis" version="1.0.4a" provider-name="ACE">
+<addon id="plugin.video.arrakis" name="Arrakis" version="1.0.6" provider-name="ACE">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.universalscrapers" version="1.0.0" />
@@ -529,7 +529,7 @@ Added Trakt Manager
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.arrakis" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
     <extension point="xbmc.addon.metadata">
         <summary lang="en">He who controls the spice, controls the universe</summary>
         <description lang="en">He who controls the spice, controls the universe</description>
@@ -537,8 +537,6 @@ Added Trakt Manager
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <license>Beerware rev. 42</license>
-        <forum>http://www.tantrumtv.com</forum>
-        <website>http://www.tantrumtv.com</website>
     </extension>
 </addon>
 
@@ -1439,6 +1437,39 @@ More minor bugfixes (honestly could not list them all)
   </extension>
 </addon>
 
+<addon id="plugin.video.torque2" name="[B][COLORlime]Torque[/COLOR][/B]" version="1.0" provider-name="[COLORlime]Gearhead[/COLOR]">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.2.1" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <import addon="script.module.dateutil" />
+		<import addon="script.module.feedparser" version="5.1.3"/>
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+        <!--<import addon="script.module.urlresolver" />-->
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">The Ultimate Racing Experience</summary>
+        <description lang="en">[COLORcyan]The Ultimate Xtreme Experience. The Absolute Best of the Racing and Xtreme Sports Worlds Plus Pure Action and Adventure Direct Link Movies. [/COLOR] </description>
+        <platform>all</platform>
+        <assets>
+        <icon>icon.gif</icon>
+        <fanart>fanart.jpg</fanart>
+        </assets>
+        <website/>
+        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+</addon>
+
 <addon id="plugin.video.ufc-finest" name="Planet MMA" version="4.3" provider-name="DK">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
@@ -1736,6 +1767,29 @@ More minor bugfixes (honestly could not list them all)
     <platform>all</platform>
 
 
+  </extension>
+</addon>
+
+<addon id="plugin.video.zigosport"
+       name=" ZiggoSport"
+       version="1.0.3"
+       provider-name="DSS">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" version="2.9.2" optional="true"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.elementtree" version="1.2.8"/>
+
+
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">ziggosport</summary>
+    <description lang="en">ziggosport</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
