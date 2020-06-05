@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.torque2" name="[B][COLORlime]Torque[/COLOR][/B]" version="1.0" provider-name="[COLORlime]Gearhead[/COLOR]">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />

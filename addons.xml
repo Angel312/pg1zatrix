@@ -1186,7 +1186,7 @@ This update contains a fix for VRT.nu that broken again!
     </extension>
 </addon>
 
-<addon id="plugin.video.seren" version="1.6.16" name="Seren" provider-name="Nixgates">
+<addon id="plugin.video.seren" version="1.6.19" name="Seren" provider-name="Nixgates">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.requests" version="2.19.1" />
@@ -1229,6 +1229,15 @@ This update contains a fix for VRT.nu that broken again!
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
+Changelog 1.6.19:
+Actually fixed alldebrid this time, promise
+
+Changelog 1.6.18:
+Fixed extraction of magnet ID in AllDebrid module when resolving single file items
+
+Changelog 1.6.17:
+Update AllDebrid module for new API version
+
 Changelog 1.6.16:
 Fix response.status_code check for Trakt Auth
 
