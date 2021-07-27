@@ -967,32 +967,33 @@ http://www.hometheater.co.il</description>
   </extension>
 </addon>
 
-<addon id="plugin.video.PLsportowo" name="Sportowa TV" version="2.0.7" provider-name="mbebe">
-	<requires>
-		<import addon="xbmc.python" version="2.25.0"/>
-		<import addon="script.module.requests" />
-		<import addon="script.module.inputstreamhelper" version="0.3.3"/>
-		<import addon="script.module.resolveurl" version="5.0.00"/>
-		<import addon="script.module.streamlink.base" />
-		<import addon="script.module.pytz" version="2014.2"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="maintv.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="serverHTTP.py" />
-	<extension point="xbmc.addon.metadata">
-		<description>Wydarzenia sportowe</description>
-		<disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
-		<summary>Relacje Live</summary>
-		<language></language>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-		<website></website>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
+<addon id="plugin.video.PLsportowo" name="Sportowa TV" version="2.0.14" provider-name="mbebe">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six"/>
+        <import addon="script.module.requests" />
+        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+        <import addon="script.module.resolveurl" version="5.0.00"/>
+        <import addon="script.module.pytz" version="2014.2"/>
+        <import addon="script.module.js2py" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="maintv.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="serverHTTP.py" />
+    <extension point="xbmc.addon.metadata">
+        <description>Wydarzenia sportowe</description>
+        <disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
+        <summary>Relacje Live</summary>
+        <language></language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website></website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon  id="plugin.video.retrospect"
@@ -1782,7 +1783,7 @@ More minor bugfixes (honestly could not list them all)
 	</extension>
 </addon>
 
-    <addon id="repository.multirepo" name="Multi Repo" version="4.0.14" provider-name="Angel">
+    <addon id="repository.multirepo" name="Multi Repo" version="4.0.15" provider-name="Angel">
 	<extension point="xbmc.addon.repository" name="Multi Repository">
     <dir>
 		    <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
@@ -1798,11 +1799,6 @@ More minor bugfixes (honestly could not list them all)
 			<info compressed="false">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/thecrewwh/zips/master/_zip/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/thecrewwh/zips/master/_zip</datadir>
-    </dir>
-    <dir>
-		    <info compressed="false">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml</info>
-	        <checksum>https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/addons.xml.md5</checksum>
-	        <datadir zip="true">https://raw.githubusercontent.com/therealatreides/houseatreides/master/_housefiles/</datadir>
     </dir>
     <dir>
 			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
