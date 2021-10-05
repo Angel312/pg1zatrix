@@ -997,7 +997,7 @@ http://www.hometheater.co.il</description>
 </addon>
 
 <addon  id="plugin.video.retrospect"
-        version="5.1.6"
+        version="5.2.22"
         name="Retrospect"
         provider-name="Bas Rieter">
 
@@ -1116,7 +1116,7 @@ http://www.hometheater.co.il</description>
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <platform>all</platform>
 
-        <summary lang="en_GB">Retrospect enables playback of re-runs/catch-ups of TV shows available online.</summary>
+        <summary lang="en_GB">Retrospect enables playback of re-runs/catch-ups of TV shows available online. Some channels that are included are: NPO Start, Kijk.nl (SBS6, NET5, Veronica, SBS9), RTL XL, NOS, Nickelodeon, AT5, Omroep Flevoland, L1, RTV Drenthe, RTV Oost, RTV Noord, RTV Noord-Holland, RTV Rijnmond, Omroep West, Omroep Gelderland, Omroep Brabant, Omrop FryslÃ¢n, WOS, DTV, Omroep Venlo Omroep Horst aan de Maas, Studio 040, RTV Utrecht, Omroep Zeeland, EÃ©n, Vier, VRT.nu, VTM, Stieve, Ketnet, DPlay, SVT, ViaFree, Viasat, UR Play, MTV, NRK, BBC, Dumpert, Fox Sports, PathÃ© Nederland, Hardware.info and Ons.</summary>
         <description lang="en_GB">Retrospect uses the official websites and freely available streams of different broadcasting companies (mainly Dutch, Belgian, British, Norwegian and Swedish) to make their re-run/catch-up episodes available on the Kodi platform.[CR][CR]More information can be found at https://rieter.net or the Retrospect wiki at https://github.com/retrospect-addon/plugin.video.retrospect/wiki/.</description>
         <disclaimer lang="en_GB">Retrospect is provided as is. We do not take any responsibility for possible (but highly unlikely) damage caused to your system. Nor do we take responsibility for the content that can be watched using this add-on or any consequences of using this add-on to watch content via the content providers' platforms.</disclaimer>
 
@@ -1124,24 +1124,29 @@ http://www.hometheater.co.il</description>
         <description lang="sv_SE">Retrospect anvÃ¤nder olika TV-kanalers (framfÃ¶rallt nederlÃ¤ndska, belgiska, brittiska, norska och svenska) officiella webbsidor och fritt tillgÃ¤ngliga strÃ¶mmar fÃ¶r att gÃ¶ra deras playkanaler tillgÃ¤ngliga i Kodi.[CR][CR]Mer information finns pÃ¥ https://rieter.net eller Retrospects wiki pÃ¥ https://github.com/retrospect-addon/plugin.video.retrospect/wiki/.</description>
         <disclaimer lang="sv_SE">Retrospect tillgÃ¤ngliggÃ¶rs i befintligt skick. Vi tar inget som helst ansvar fÃ¶r mÃ¶jliga (men hÃ¶gst osannolika) skador pÃ¥ ditt system. Vi tar inte heller ansvar fÃ¶r innehÃ¥llet som kan ses med detta tillÃ¤gg eller konsekvenser av att anvÃ¤nda tillÃ¤gget fÃ¶r att se innehÃ¥llet via innehÃ¥llsleverantÃ¶rernas plattformar.</disclaimer>
 
-        <license>CC-BY-NC-SA-4.0</license>
-        <language>en nl de se no lt lv fi</language>
-        <news>[B]Retrospect v5.1.6 - Changelog - 2020-01-23[/B]
+        <license>GPL-3.0-or-later</license>
+        <language>en nl de sv no lt lv fi</language>
+        <news>[B]Retrospect v5.2.22 - Changelog - 2021-01-29[/B]
 
-This update contains a fix for VRT.nu that broken again!
+A minor release to fix NRK.no categories and to implement the move from Vier.be to goplay.be.
 
 [B]Framework related[/B]
--
+_None_
 
 [B]GUI/Settings/Language related[/B]
--
+_None_
 
 [B]Channel related[/B]
-* Fixed: VRT.nu updated some HTML pages again! (Fixes #1281)
+* Fixed: NRK.no categories broke.
+* Fixed: Vier.be, vijf.be and zes.be moved to goplay.be
+* Fixed: NPO Thumb issue (Fixes #1479)
+
+
         </news>
         <assets>
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.jpg</fanart>
+            <banner>resources/media/banner.jpg</banner>
             <screenshot>resources/media/retrospect01.jpg</screenshot>
             <screenshot>resources/media/retrospect02.jpg</screenshot>
             <screenshot>resources/media/retrospect03.jpg</screenshot>
