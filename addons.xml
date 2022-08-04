@@ -656,26 +656,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<addon id="plugin.video.dubbedanime" version="1.0.4" name="Dubbed Anime" provider-name="#">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.beautifulsoup4"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en"></summary>
-		<description lang="en"></description>
-		<platform>all</platform>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en"></disclaimer>
-		<news></news>
-	</extension>
-</addon>
-
 <addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -713,38 +693,6 @@ This is a Non-profit resource, organized solely for educational purposes which i
 		<website>https://</website>
 		<platform>all</platform>
 	</extension>
-</addon>
-
-<addon id="plugin.video.JokerSports" name="[COLORgold]Joker Sports[/COLOR]" version="2.3.3" provider-name="Maverick">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.universalscrapers" version="1.0.0" />
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.beautifulsoup" version="3.2.1" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.addon.common" version="2.0.0" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-		<import addon="plugin.video.youtube" version="3.0.0"/>
-		<import addon="script.module.dateutil" />
-        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.resolveurl" />
-		<import addon="script.module.ATFlive" />
-		<import addon="script.module.jokerHD" />
-		<import addon="script.module.ATFmobdro" />
-		<import addon="script.module.ATFTV" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>audio video</provides>
-    </extension>
-	<extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
-    <extension point="xbmc.addon.metadata">
-       <summary lang="en">Maverick TV</summary>
-    <description lang="en">Maverick TV</description>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.video.joyride" name="[B][COLORlime]Joy[COLORmagenta]Ride[/COLOR][/B]" version="1.6" provider-name="[COLORlime]The Joker[/COLOR]">
@@ -933,35 +881,6 @@ http://www.hometheater.co.il</summary>
 http://www.hometheater.co.il</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.PLsportowo" name="Sportowa TV" version="2.0.17" provider-name="mbebe">
-    <requires>
-        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
-        <import addon="script.module.six"/>
-        <import addon="script.module.requests" />
-        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
-        <import addon="script.module.resolveurl" version="5.1.30"/>
-        <import addon="script.module.pytz" version="2014.2"/>
-        <import addon="script.module.js2py" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="maintv.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="serverHTTP.py" />
-    <extension point="xbmc.addon.metadata">
-        <description>Wydarzenia sportowe</description>
-        <disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
-        <summary>Relacje Live</summary>
-        <language></language>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website></website>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
 </addon>
 
 <addon  id="plugin.video.retrospect"
@@ -1302,35 +1221,6 @@ Implement new listall endpoint for Premiumize cloud scraping (decreased scrape t
 More minor bugfixes (honestly could not list them all)
 		</news>
 	</extension>
-</addon>
-
-<addon id="plugin.video.sport365.live" name="Sport365" version="2.6.10.1" provider-name="Bugatsinho">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.requests" version="2.1.0"/>
-        <import addon="plugin.video.f4mTester" version="2.7.2"/>
-        <import addon="script.module.streamlink.base" />
-        <import addon="script.module.pyxbmct" version="1.2.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Sport365 originally made by GalAnonim</summary>
-    <description lang="en">Fork version 1.0 by GalAnonim!Kindly note that Sport365 Live is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor itâ€™s intended use, it is simply a third party plugin which has been added to your system.</description>
-    <disclaimer lang="en">Sport365 Live does not provide any streams of its own. Stream quality, content and copyright are responsibility of the ad-financed source web site.</disclaimer>
-    <language>en</language>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <website>https://bugatsinho.github.io</website>
-    <twitter>@bugatsinho</twitter>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.png</fanart>
-  </assets>
-  <news>2.6.10 18-01-2020
-- Just fix regex issues.Streams could not play!</news>
-  </extension>
 </addon>
 
 <addon id="plugin.video.sportliveevents" name="Sport LIVE" version="1.9" provider-name="mbebe">
@@ -2159,7 +2049,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
   </extension>
 </addon>
 
-<addon id="script.module.thecrew" name="[COLOR orchid]THE CREW MODULE[/COLOR]" version="1.0.8B" provider-name="The Crew">
+<addon id="script.module.thecrew" name="[COLOR orchid]THE CREW MODULE[/COLOR]" version="1.0.8C" provider-name="The Crew">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.beautifulsoup4"/>
