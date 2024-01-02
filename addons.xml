@@ -2189,7 +2189,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 </addon>
 
 <addon id="service.subloader"
-    name="SubLoader" version="0.1.6" provider-name="DenimNani">
+    name="SubLoader" version="0.1.6A" provider-name="DenimNani">
   <requires>
   </requires>
   <extension point="xbmc.service" library="monitor.py" start="login"></extension>
